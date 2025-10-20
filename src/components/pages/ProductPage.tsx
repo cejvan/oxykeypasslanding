@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { getLocalizedPath } from '@/utils/routes';
@@ -14,8 +13,6 @@ import {
   Users, 
   CheckCircle, 
   ArrowRight,
-  Download,
-  Star,
   Award,
   Zap
 } from 'lucide-react';

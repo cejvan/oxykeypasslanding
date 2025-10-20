@@ -1,6 +1,5 @@
 'use client';
 
-import { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 // simple classnames combiner
@@ -11,7 +10,6 @@ function cx(...classes: Array<string | false | undefined>) {
 type HeroProps = {
   title: string;
   subtitle?: string;
-  icon?: ReactNode;
   className?: string;
   align?: 'center' | 'left';
   breadcrumbs?: Array<{ label: string; href?: string }>;
@@ -19,7 +17,7 @@ type HeroProps = {
   backgroundImageUrl?: string;
 };
 
-const Hero = ({ title, subtitle, icon, className, align = 'center', breadcrumbs = [], ctas = [], backgroundImageUrl }: HeroProps) => {
+const Hero = ({ title, subtitle, className, align = 'center', breadcrumbs = [], ctas = [], backgroundImageUrl }: HeroProps) => {
   return (
     <section className={cx('relative bg-gradient-to-br from-blue-50 to-indigo-100 mt-[0px]', className)} style={{ height: '400px' }}>
       {backgroundImageUrl && (

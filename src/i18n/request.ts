@@ -10,27 +10,33 @@ export default getRequestConfig(async ({ requestLocale }) => {
     : routing.defaultLocale;
 
   // Load base messages
-  const baseMessages = (await import(`../../dictionary/${locale}.json`)).default as any;
+  const baseMessages = (await import(`../../dictionary/${locale}.json`)).default as Record<string, unknown>;
 
   // Attempt to load page-scoped welcoming messages and merge under the 'welcoming' namespace
-  let welcomingNamespace: any = {};
+  let welcomingNamespace: Record<string, unknown> = {};
   try {
-    const welcomingFile = (await import(`../../dictionary/${locale}/welcoming.json`)).default as any;
+    const welcomingFile = (await import(`../../dictionary/${locale}/welcoming.json`)).default as Record<string, unknown>;
     const { welcoming: welcomingRoot = {}, ...welcomingSections } = welcomingFile || {};
     // Merge root welcoming keys with section groups (features, stats, benefits, ...)
-    welcomingNamespace = { ...welcomingRoot, ...welcomingSections };
-  } catch (_) {
+    welcomingNamespace = { 
+      ...(welcomingRoot as Record<string, unknown>), 
+      ...(welcomingSections as Record<string, unknown>) 
+    };
+  } catch {
     // Optional file; ignore if missing
   }
 
   // Attempt to load page-scoped product messages and merge under the 'product' namespace
-  let productNamespace: any = {};
+  let productNamespace: Record<string, unknown> = {};
   try {
-    const productFile = (await import(`../../dictionary/${locale}/product.json`)).default as any;
+    const productFile = (await import(`../../dictionary/${locale}/product.json`)).default as Record<string, unknown>;
     const { product: productRoot = {}, ...productSections } = productFile || {};
     // Merge root product keys with section groups (features, benefits, cta, ...)
-    productNamespace = { ...productRoot, ...productSections };
-  } catch (_) {
+    productNamespace = { 
+      ...(productRoot as Record<string, unknown>), 
+      ...(productSections as Record<string, unknown>) 
+    };
+  } catch {
     // Optional file; ignore if missing
   }
 

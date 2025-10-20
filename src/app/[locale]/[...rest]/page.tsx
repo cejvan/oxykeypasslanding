@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import ContactPage from "@/components/pages/ContactPage";
 import ProductPage from "@/components/pages/ProductPage";
 import { getTranslations } from "next-intl/server";
-import { Clock } from "lucide-react";
 import Hero from '@/components/Hero';
 import { getLocalizedPath } from '@/utils/routes';
 
@@ -39,7 +38,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   // Generic simple page renderer for new tabs
   const renderSimplePage = async (key: string) => {
     const tNav = await getTranslations({ locale, namespace: "navigation" });
-    const title = tNav(key as any);
+    const title = tNav(key as string);
     const breadcrumbs = [
       { label: tNav('home'), href: getLocalizedPath('home', locale) },
       { label: title }
@@ -49,7 +48,6 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
         <Hero
           title={title}
           subtitle={'Coming soon.'}
-          icon={<Clock className="w-8 h-8 text-blue-600" />}
           align="left"
           breadcrumbs={breadcrumbs}
           backgroundImageUrl="https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=1920&q=80"
