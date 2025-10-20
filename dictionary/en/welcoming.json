@@ -1,0 +1,100 @@
+{
+  "welcoming": {
+    "greeting": "Hello",
+    "welcome": "Welcome to OxyKeyPass",
+    "themeName": "OxyKeyPass",
+    "subtitle": "Digital Access Management System",
+    "description": "Digitize your business access processes. Provide fast and contactless access with card, QR code or mobile device.",
+    "corporate": "Secure",
+    "quality": "Quality",
+    "global": "Global",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "digitalAccess": "Digital Access Management",
+    "digitalAccessDesc": "Fast and contactless access with card, QR code or mobile device",
+    "qrIntegration": "QR Code Integration",
+    "qrIntegrationDesc": "Cost savings with QR code support on existing turnstiles",
+    "securityControl": "Security Control",
+    "securityControlDesc": "Prevents unauthorized access with role-based access management",
+    "dataAnalytics": "Data Analytics",
+    "dataAnalyticsDesc": "Real-time recording and analysis of access data"
+  },
+  "stats": {
+    "businesses": "Businesses",
+    "dailyAccess": "Daily Access",
+    "security": "Security",
+    "systemModels": "System Models"
+  },
+  "benefits": {
+    "cloudHybrid": "Full Cloud and Hybrid system models",
+    "easyIntegration": "Easy integration with existing turnstiles",
+    "realTimeData": "Real-time data recording and analysis",
+    "roleBasedAccess": "Role-based access control",
+    "costSavings": "Provides cost savings",
+    "gdprCompliant": "KVKK and GDPR compliant"
+  },
+  "services": {
+    "digitalAccessManagement": "Digital Access Management",
+    "digitalAccessManagementDesc": "We provide fast and contactless access with card, QR code or mobile device.",
+    "systemIntegration": "System Integration",
+    "systemIntegrationDesc": "We integrate your existing turnstile systems with OxyKeyPass infrastructure at minimum cost.",
+    "dataAnalyticsReporting": "Data Analytics and Reporting",
+    "dataAnalyticsReportingDesc": "Records access data in real-time, analyzes and provides detailed reports.",
+    "securityManagement": "Security Management",
+    "securityManagementDesc": "Prevents unauthorized access, provides role-based access control and prevents security breaches.",
+    "cloudHybridSystems": "Cloud and Hybrid Systems",
+    "cloudHybridSystemsDesc": "We provide flexible solutions with Full Cloud and Hybrid system models.",
+    "costSavings": "Cost Savings",
+    "costSavingsDesc": "Reduces physical card usage and eliminates additional hardware costs.",
+    "digitalAccessManagementItems": {
+      "cardBased": "Card-based access",
+      "qrIntegration": "QR code integration",
+      "mobileApp": "Mobile application"
+    },
+    "systemIntegrationItems": {
+      "existingIntegration": "Existing system integration",
+      "motherboardReplacement": "Motherboard replacement",
+      "lowCost": "Low cost"
+    },
+    "dataAnalyticsReportingItems": {
+      "realTimeRecording": "Real-time data recording",
+      "detailedReports": "Detailed reports",
+      "statisticalAnalysis": "Statistical analysis"
+    },
+    "securityManagementItems": {
+      "authorizationControl": "Authorization control",
+      "roleBasedAccess": "Role-based access",
+      "breachPrevention": "Security breach prevention"
+    },
+    "cloudHybridSystemsItems": {
+      "fullCloud": "Full Cloud system",
+      "hybrid": "Hybrid system",
+      "flexibleSolutions": "Flexible solutions"
+    },
+    "costSavingsItems": {
+      "noPhysicalCardCost": "No physical card cost",
+      "noAdditionalHardware": "No additional hardware needed",
+      "lowMaintenanceCost": "Low maintenance cost"
+    }
+  },
+  "cta": {
+    "getStartedToday": "Get Started Today",
+    "getStartedDesc": "Digitize your business access processes with OxyKeyPass. Start with free consultation!",
+    "freeConsultation": "Free Consultation",
+    "viewServices": "View Services"
+  },
+  "whyOxyKeyPass": {
+    "title": "Why OxyKeyPass?",
+    "desc": "We provide all the password management tools you need for your digital security in a single platform"
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "desc": "Digitize your business access processes with OxyKeyPass. Increase security and operational efficiency."
+  },
+  "whatWeDo": {
+    "title": "What Do We Do for Our Customers?",
+    "desc": "We provide comprehensive access management solutions to digitize your business access processes"
+  }
+}

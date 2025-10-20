@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "product": "Produkt"
+  },
+  "product": {
+    "title": "Digitales Zugangsmanagementsystem",
+    "subtitle": "Digitalisieren Sie die Zugangsprozesse Ihres Unternehmens. Bieten Sie schnellen und berührungslosen Zugang mit Karte, QR-Code oder mobilem Gerät.",
+    "freeTrial": "Kostenlose Testversion",
+    "downloadDemo": "Demo Herunterladen",
+    "whyOxyKeyPass": "Warum OxyKeyPass?",
+    "whyOxyKeyPassDesc": "Intelligente Lösung, die traditionelle Zugangssysteme mit moderner Technologie kombiniert",
+    "features": {
+      "mobileApp": {
+        "title": "Mobile Anwendung",
+        "description": "Zugang von überall mit iOS und Android App"
+      },
+      "qrCode": {
+        "title": "QR-Code-System",
+        "description": "Berührungslose und schnelle Zugangsmöglichkeit"
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Industriestandard-Sicherheitsprotokolle"
+      },
+      "timeTracking": {
+        "title": "Zeiterfassung",
+        "description": "Detaillierte Ein- und Ausgangsberichte"
+      }
+    },
+    "benefits": {
+      "title": "Unsere Vorteile",
+      "subtitle": "Bringen Sie Ihr Unternehmen mit OxyKeyPass auf die nächste Stufe",
+      "userFriendly": {
+        "title": "Benutzerfreundlich",
+        "description": "Einfache Einrichtung und Verwendung"
+      },
+      "quickSetup": {
+        "title": "Schnelle Einrichtung",
+        "description": "System in 5 Minuten aktivieren"
+      },
+      "certified": {
+        "title": "Zertifiziert",
+        "description": "ISO 27001 Sicherheitszertifizierung"
+      },
+      "compliant": {
+        "title": "Konform",
+        "description": "KVKK und GDPR konform"
+      }
+    },
+    "cta": {
+      "title": "Bereit zu Starten?",
+      "subtitle": "Entdecken Sie die Kraft von OxyKeyPass mit 14-tägiger kostenloser Testversion",
+      "startFreeTrial": "Kostenlose Testversion Starten",
+      "requestDemo": "Demo Anfordern"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "welcoming": {
+    "greeting": "Hola",
+    "welcome": "Bienvenido a OxyKeyPass",
+    "themeName": "OxyKeyPass",
+    "subtitle": "Sistema de Gestión de Acceso Digital",
+    "description": "Digitaliza los procesos de entrada y salida de tu empresa. Permite acceso rápido y sin contacto con tarjeta, código QR o dispositivo móvil.",
+    "corporate": "Seguro",
+    "quality": "Calidad",
+    "global": "Global",
+    "getStarted": "Comenzar",
+    "learnMore": "Saber Más"
+  },
+  "features": {
+    "digitalAccess": "Gestión de Acceso Digital",
+    "digitalAccessDesc": "Acceso rápido y sin contacto con tarjeta, código QR o dispositivo móvil",
+    "qrIntegration": "Integración de Código QR",
+    "qrIntegrationDesc": "Soporte de código QR en torniquetes existentes para ahorro de costos",
+    "securityControl": "Control de Seguridad",
+    "securityControlDesc": "Previene el acceso no autorizado, control de acceso basado en roles",
+    "dataAnalytics": "Análisis de Datos",
+    "dataAnalyticsDesc": "Registra y analiza datos de entrada y salida en tiempo real"
+  },
+  "stats": {
+    "businesses": "Empresas",
+    "dailyAccess": "Accesos Diarios",
+    "security": "Seguridad",
+    "systemModels": "Modelos de Sistema"
+  },
+  "benefits": {
+    "cloudHybrid": "Modelos de sistema Cloud completo e Híbrido",
+    "easyIntegration": "Integración fácil con torniquetes existentes",
+    "realTimeData": "Grabación y análisis de datos en tiempo real",
+    "roleBasedAccess": "Control de acceso basado en roles",
+    "costSavings": "Proporciona ahorro de costos",
+    "gdprCompliant": "Cumple con KVKK y GDPR"
+  },
+  "services": {
+    "digitalAccessManagement": "Gestión de Acceso Digital",
+    "digitalAccessManagementDesc": "Proporcionamos acceso rápido y sin contacto con tarjeta, código QR o dispositivo móvil.",
+    "systemIntegration": "Integración de Sistemas",
+    "systemIntegrationDesc": "Integramos sus sistemas de torniquetes existentes con la infraestructura OxyKeyPass a costo mínimo.",
+    "dataAnalyticsReporting": "Análisis de Datos e Informes",
+    "dataAnalyticsReportingDesc": "Registra datos de acceso en tiempo real, analiza y proporciona informes detallados.",
+    "securityManagement": "Gestión de Seguridad",
+    "securityManagementDesc": "Previene el acceso no autorizado, proporciona control de acceso basado en roles y previene violaciones de seguridad.",
+    "cloudHybridSystems": "Sistemas Cloud e Híbridos",
+    "cloudHybridSystemsDesc": "Proporcionamos soluciones flexibles con modelos de sistema Cloud completo e Híbrido.",
+    "costSavings": "Ahorro de Costos",
+    "costSavingsDesc": "Reduce el uso de tarjetas físicas y elimina costos adicionales de hardware.",
+    "digitalAccessManagementItems": {
+      "cardBased": "Acceso basado en tarjeta",
+      "qrIntegration": "Integración de código QR",
+      "mobileApp": "Aplicación móvil"
+    },
+    "systemIntegrationItems": {
+      "existingIntegration": "Integración de sistemas existentes",
+      "motherboardReplacement": "Reemplazo de placa base",
+      "lowCost": "Bajo costo"
+    },
+    "dataAnalyticsReportingItems": {
+      "realTimeRecording": "Registro de datos en tiempo real",
+      "detailedReports": "Informes detallados",
+      "statisticalAnalysis": "Análisis estadístico"
+    },
+    "securityManagementItems": {
+      "authorizationControl": "Control de autorizaciones",
+      "roleBasedAccess": "Acceso basado en roles",
+      "breachPrevention": "Prevención de brechas de seguridad"
+    },
+    "cloudHybridSystemsItems": {
+      "fullCloud": "Sistema Cloud completo",
+      "hybrid": "Sistema híbrido",
+      "flexibleSolutions": "Soluciones flexibles"
+    },
+    "costSavingsItems": {
+      "noPhysicalCardCost": "Sin coste de tarjeta física",
+      "noAdditionalHardware": "No requiere hardware adicional",
+      "lowMaintenanceCost": "Bajo coste de mantenimiento"
+    }
+  },
+  "cta": {
+    "getStartedToday": "Comienza Hoy",
+    "getStartedDesc": "Digitaliza los procesos de acceso de tu negocio con OxyKeyPass. ¡Comienza con consulta gratuita!",
+    "freeConsultation": "Consulta Gratuita",
+    "viewServices": "Ver Servicios"
+  },
+  "whyOxyKeyPass": {
+    "title": "¿Por qué OxyKeyPass?",
+    "desc": "Proporcionamos todas las herramientas de gestión de acceso que necesitas para tu seguridad digital en una sola plataforma"
+  },
+  "advantages": {
+    "title": "Nuestras Ventajas",
+    "desc": "Digitaliza los procesos de acceso de tu negocio con OxyKeyPass. Aumenta la seguridad y eficiencia operacional."
+  },
+  "whatWeDo": {
+    "title": "¿Qué Hacemos por Nuestros Clientes?",
+    "desc": "Proporcionamos soluciones integrales de gestión de acceso para digitalizar los procesos de acceso de tu negocio"
+  }
+}

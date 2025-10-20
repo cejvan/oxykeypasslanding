@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Home",
+    "product": "Product"
+  },
+  "product": {
+    "title": "Digital Access Management System",
+    "subtitle": "Digitize your business access processes. Provide fast and contactless access with card, QR code or mobile device.",
+    "freeTrial": "Free Trial",
+    "downloadDemo": "Download Demo",
+    "whyOxyKeyPass": "Why OxyKeyPass?",
+    "whyOxyKeyPassDesc": "Smart solution combining traditional access systems with modern technology",
+    "features": {
+      "mobileApp": {
+        "title": "Mobile Application",
+        "description": "Access from anywhere with iOS and Android app"
+      },
+      "qrCode": {
+        "title": "QR Code System",
+        "description": "Contactless and fast access capability"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Industry standard security protocols"
+      },
+      "timeTracking": {
+        "title": "Time Tracking",
+        "description": "Detailed entry-exit reports"
+      }
+    },
+    "benefits": {
+      "title": "Our Advantages",
+      "subtitle": "Take your business to the next level with OxyKeyPass",
+      "userFriendly": {
+        "title": "User Friendly",
+        "description": "Easy setup and usage"
+      },
+      "quickSetup": {
+        "title": "Quick Setup",
+        "description": "Activate the system in 5 minutes"
+      },
+      "certified": {
+        "title": "Certified",
+        "description": "ISO 27001 security certification"
+      },
+      "compliant": {
+        "title": "Compliant",
+        "description": "KVKK and GDPR compliant"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Discover the power of OxyKeyPass with 14-day free trial",
+      "startFreeTrial": "Start Free Trial",
+      "requestDemo": "Request Demo"
+    }
+  }
+}

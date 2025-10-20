@@ -1,0 +1,100 @@
+{
+  "welcoming": {
+    "greeting": "Merhaba",
+    "welcome": "OxyKeyPass'e Hoş Geldiniz",
+    "themeName": "OxyKeyPass",
+    "subtitle": "Dijital Geçiş Yönetim Sistemi",
+    "description": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirin. Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlayın.",
+    "corporate": "Güvenli",
+    "quality": "Kaliteli",
+    "global": "Küresel",
+    "getStarted": "Hemen Başla",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "features": {
+    "digitalAccess": "Dijital Geçiş Yönetimi",
+    "digitalAccessDesc": "Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı",
+    "qrIntegration": "QR Kod Entegrasyonu",
+    "qrIntegrationDesc": "Mevcut turnikelerde QR kod desteği ile maliyet tasarrufu",
+    "securityControl": "Güvenlik Kontrolü",
+    "securityControlDesc": "Yetkisiz erişimleri engeller, rol bazlı erişim yönetimi",
+    "dataAnalytics": "Veri Analizi",
+    "dataAnalyticsDesc": "Giriş-çıkış verilerini anlık kaydeder ve analiz eder"
+  },
+  "stats": {
+    "businesses": "İşletme",
+    "dailyAccess": "Günlük Geçiş",
+    "security": "Güvenlik",
+    "systemModels": "Sistem Modeli"
+  },
+  "benefits": {
+    "cloudHybrid": "Tam Bulut ve Hibrit sistem modelleri",
+    "easyIntegration": "Mevcut turnikelerle kolay entegrasyon",
+    "realTimeData": "Anlık veri kaydı ve analiz",
+    "roleBasedAccess": "Rol bazlı erişim kontrolü",
+    "costSavings": "Maliyet tasarrufu sağlar",
+    "gdprCompliant": "KVKK ve GDPR uyumlu"
+  },
+  "services": {
+    "digitalAccessManagement": "Dijital Geçiş Yönetimi",
+    "digitalAccessManagementDesc": "Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlıyoruz.",
+    "systemIntegration": "Sistem Entegrasyonu",
+    "systemIntegrationDesc": "Mevcut turnike sistemlerinizi minimum maliyetle OxyKeyPass altyapısına entegre ediyoruz.",
+    "dataAnalyticsReporting": "Veri Analizi ve Raporlama",
+    "dataAnalyticsReportingDesc": "Giriş-çıkış verilerini anlık kaydeder, analiz eder ve detaylı raporlar sunar.",
+    "securityManagement": "Güvenlik Yönetimi",
+    "securityManagementDesc": "Yetkisiz erişimleri engeller, rol bazlı erişim kontrolü sağlar ve güvenlik ihlallerini önler.",
+    "cloudHybridSystems": "Bulut ve Hibrit Sistemler",
+    "cloudHybridSystemsDesc": "Tam Bulut ve Hibrit sistem modelleri ile esnek çözümler sunuyoruz.",
+    "costSavings": "Maliyet Tasarrufu",
+    "costSavingsDesc": "Fiziksel kart kullanımını azaltır, ek donanım maliyetlerini ortadan kaldırır.",
+    "digitalAccessManagementItems": {
+      "cardBased": "Kart tabanlı geçiş",
+      "qrIntegration": "QR kod entegrasyonu",
+      "mobileApp": "Mobil uygulama"
+    },
+    "systemIntegrationItems": {
+      "existingIntegration": "Mevcut sistem entegrasyonu",
+      "motherboardReplacement": "Anakart değişimi",
+      "lowCost": "Düşük maliyet"
+    },
+    "dataAnalyticsReportingItems": {
+      "realTimeRecording": "Anlık veri kaydı",
+      "detailedReports": "Detaylı raporlar",
+      "statisticalAnalysis": "İstatistik analizi"
+    },
+    "securityManagementItems": {
+      "authorizationControl": "Yetki kontrolü",
+      "roleBasedAccess": "Rol bazlı erişim",
+      "breachPrevention": "Güvenlik ihlali önleme"
+    },
+    "cloudHybridSystemsItems": {
+      "fullCloud": "Tam Bulut sistemi",
+      "hybrid": "Hibrit sistem",
+      "flexibleSolutions": "Esnek çözümler"
+    },
+    "costSavingsItems": {
+      "noPhysicalCardCost": "Fiziksel kart maliyeti yok",
+      "noAdditionalHardware": "Ek donanım gerekmez",
+      "lowMaintenanceCost": "Düşük bakım maliyeti"
+    }
+  },
+  "cta": {
+    "getStartedToday": "Hemen Başlayın",
+    "getStartedDesc": "OxyKeyPass ile işletmenizin giriş-çıkış süreçlerini dijitalleştirin. Ücretsiz danışmanlık ile başlayın!",
+    "freeConsultation": "Ücretsiz Danışmanlık",
+    "viewServices": "Hizmetleri Gör"
+  },
+  "whyOxyKeyPass": {
+    "title": "Neden OxyKeyPass?",
+    "desc": "Dijital güvenliğiniz için ihtiyacınız olan tüm şifre yönetimi araçlarını tek platformda sunuyoruz"
+  },
+  "advantages": {
+    "title": "Avantajlarımız",
+    "desc": "OxyKeyPass ile işletmenizin giriş-çıkış süreçlerini dijitalleştirin. Güvenlik ve operasyonel verimliliği artırın."
+  },
+  "whatWeDo": {
+    "title": "Müşterilerimize Ne Yapıyoruz?",
+    "desc": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirmek için kapsamlı geçiş yönetim çözümleri sunuyoruz"
+  }
+}

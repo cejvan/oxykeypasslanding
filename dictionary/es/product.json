@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "product": "Producto"
+  },
+  "product": {
+    "title": "Sistema de Gestión de Acceso Digital",
+    "subtitle": "Digitalice los procesos de acceso de su empresa. Proporcione acceso rápido y sin contacto con tarjeta, código QR o dispositivo móvil.",
+    "freeTrial": "Prueba Gratuita",
+    "downloadDemo": "Descargar Demo",
+    "whyOxyKeyPass": "¿Por qué OxyKeyPass?",
+    "whyOxyKeyPassDesc": "Solución inteligente que combina sistemas de acceso tradicionales con tecnología moderna",
+    "features": {
+      "mobileApp": {
+        "title": "Aplicación Móvil",
+        "description": "Acceso desde cualquier lugar con aplicación iOS y Android"
+      },
+      "qrCode": {
+        "title": "Sistema de Código QR",
+        "description": "Capacidad de acceso sin contacto y rápido"
+      },
+      "security": {
+        "title": "Seguridad",
+        "description": "Protocolos de seguridad estándar de la industria"
+      },
+      "timeTracking": {
+        "title": "Seguimiento de Tiempo",
+        "description": "Informes detallados de entrada y salida"
+      }
+    },
+    "benefits": {
+      "title": "Nuestras Ventajas",
+      "subtitle": "Lleve su negocio al siguiente nivel con OxyKeyPass",
+      "userFriendly": {
+        "title": "Fácil de Usar",
+        "description": "Configuración y uso fáciles"
+      },
+      "quickSetup": {
+        "title": "Configuración Rápida",
+        "description": "Active el sistema en 5 minutos"
+      },
+      "certified": {
+        "title": "Certificado",
+        "description": "Certificación de seguridad ISO 27001"
+      },
+      "compliant": {
+        "title": "Cumplimiento",
+        "description": "Cumplimiento con KVKK y GDPR"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar?",
+      "subtitle": "Descubra el poder de OxyKeyPass con prueba gratuita de 14 días",
+      "startFreeTrial": "Iniciar Prueba Gratuita",
+      "requestDemo": "Solicitar Demo"
+    }
+  }
+}

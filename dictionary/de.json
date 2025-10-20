@@ -1,0 +1,79 @@
+{
+  "welcoming": {
+    "greeting": "Hallo",
+    "welcome": "Willkommen bei OxyKeyPass",
+    "themeName": "OxyKeyPass",
+    "subtitle": "Digitales Zugangsmanagementsystem",
+    "description": "Digitalisieren Sie die Ein- und Ausgangsprozesse Ihres Unternehmens. Ermöglichen Sie schnellen und berührungslosen Zugang mit Karte, QR-Code oder Mobilgerät.",
+    "corporate": "Sicher",
+    "quality": "Qualität",
+    "global": "Global",
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr Erfahren"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "product": "Produkt",
+    "solutions": "Lösungen",
+    "models": "Modelle",
+    "integrations": "Integrationen",
+    "security": "Sicherheit & Compliance",
+    "pricing": "Preise",
+    "resources": "Ressourcen",
+    "contact": "Kontakt"
+  },
+  "Metadata": {
+    "title": "OxyKeyPass - Sichere Passwort-Verwaltung",
+    "description": "Speichern, organisieren und verwalten Sie Ihre Passwörter sicher. Verbessern Sie Ihre digitale Sicherheit mit OxyKeyPass.",
+    "keywords": "Passwort-Verwaltung, Sicherheit, digitale Sicherheit, Passwort-Speicherung, Passwort-Organisation, sicheres Passwort"
+  },
+  "projects": {
+    "title": "Projekte",
+    "desc": "Erkunden Sie unsere Projekte."
+  },
+  "technologies": {
+    "title": "Technologien",
+    "desc": "Technologien, die wir verwenden."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "desc": "Kontaktieren Sie uns.",
+    "description": "Kontaktieren Sie uns für Ihre Fragen. Unser Expertenteam hilft Ihnen gerne.",
+    "form": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "company": "Unternehmen (Optional)",
+      "message": "Ihre Nachricht...",
+      "send": "Nachricht Senden",
+      "sending": "Wird gesendet...",
+      "success": "Ihre Nachricht wurde erfolgreich gesendet! Wir werden Ihnen bald antworten.",
+      "error": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "address": "Adresse",
+      "workingHours": "Arbeitszeiten",
+      "weekdays": "Montag - Freitag: 09:00 - 18:00",
+      "saturday": "Samstag: 10:00 - 16:00",
+      "sunday": "Sonntag: Geschlossen"
+    }
+  },
+  "about": {
+    "title": "Über Uns",
+    "desc": "Erfahren Sie mehr über unser Unternehmen und unsere Werte."
+  },
+  "category": {
+    "productsListTitle": "Produkte",
+    "subCategories": "Unterkategorien",
+    "mainCategory": "Hauptkategorie"
+  },
+  "error": {
+    "title": "Etwas ist schief gelaufen!",
+    "sorry": "Entschuldigung, ein unerwarteter Fehler ist aufgetreten.",
+    "tryAgain": "Erneut versuchen",
+    "returnHome": "Zurück zur Startseite"
+  }
+}

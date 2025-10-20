@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Anasayfa",
+    "product": "Ürün"
+  },
+  "product": {
+    "title": "Dijital Geçiş Yönetim Sistemi",
+    "subtitle": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirin. Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlayın.",
+    "freeTrial": "Ücretsiz Deneme",
+    "downloadDemo": "Demo İndir",
+    "whyOxyKeyPass": "Neden OxyKeyPass?",
+    "whyOxyKeyPassDesc": "Modern teknoloji ile geleneksel geçiş sistemlerini birleştiren akıllı çözüm",
+    "features": {
+      "mobileApp": {
+        "title": "Mobil Uygulama",
+        "description": "iOS ve Android uygulaması ile her yerden erişim"
+      },
+      "qrCode": {
+        "title": "QR Kod Sistemi",
+        "description": "Temassız ve hızlı geçiş imkanı"
+      },
+      "security": {
+        "title": "Güvenlik",
+        "description": "Endüstri standardı güvenlik protokolleri"
+      },
+      "timeTracking": {
+        "title": "Zaman Takibi",
+        "description": "Detaylı giriş-çıkış raporları"
+      }
+    },
+    "benefits": {
+      "title": "Avantajlarımız",
+      "subtitle": "OxyKeyPass ile işletmenizi bir üst seviyeye taşıyın",
+      "userFriendly": {
+        "title": "Kullanıcı Dostu",
+        "description": "Kolay kurulum ve kullanım"
+      },
+      "quickSetup": {
+        "title": "Hızlı Kurulum",
+        "description": "5 dakikada sistemi aktif hale getirin"
+      },
+      "certified": {
+        "title": "Sertifikalı",
+        "description": "ISO 27001 güvenlik sertifikası"
+      },
+      "compliant": {
+        "title": "Uyumlu",
+        "description": "KVKK ve GDPR uyumlu"
+      }
+    },
+    "cta": {
+      "title": "Hemen Başlamaya Hazır mısınız?",
+      "subtitle": "14 gün ücretsiz deneme ile OxyKeyPass'in gücünü keşfedin",
+      "startFreeTrial": "Ücretsiz Deneme Başlat",
+      "requestDemo": "Demo Talep Et"
+    }
+  }
+}

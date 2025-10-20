@@ -1,0 +1,79 @@
+{
+  "welcoming": {
+    "greeting": "Merhaba",
+    "welcome": "OxyKeyPass'e Hoş Geldiniz",
+    "themeName": "OxyKeyPass",
+    "subtitle": "Dijital Geçiş Yönetim Sistemi",
+    "description": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirin. Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlayın.",
+    "corporate": "Güvenli",
+    "quality": "Kaliteli",
+    "global": "Küresel",
+    "getStarted": "Hemen Başla",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "navigation": {
+    "home": "Anasayfa",
+    "product": "Ürün",
+    "solutions": "Çözümler",
+    "models": "Modeller",
+    "integrations": "Entegrasyonlar",
+    "security": "Güvenlik & Uyum",
+    "pricing": "Fiyatlandırma",
+    "resources": "Kaynaklar",
+    "contact": "İletişim"
+  },
+  "Metadata": {
+    "title": "OxyKeyPass - Dijital Geçiş Yönetim Sistemi",
+    "description": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirin. Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlayın.",
+    "keywords": "dijital geçiş, giriş-çıkış yönetimi, QR kod, kart sistemi, mobil geçiş, güvenlik kontrolü, erişim yönetimi"
+  },
+  "projects": {
+    "title": "Projeler",
+    "desc": "Projelerimizi inceleyin."
+  },
+  "technologies": {
+    "title": "Teknolojiler",
+    "desc": "Kullandığımız teknolojiler."
+  },
+  "contact": {
+    "title": "İletişim",
+    "desc": "Bizimle iletişime geçin.",
+    "description": "Sorularınız için bizimle iletişime geçin. Uzman ekibimiz size yardımcı olmaktan mutluluk duyar.",
+    "form": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "company": "Şirket (Opsiyonel)",
+      "message": "Mesajınız...",
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.",
+      "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "phone": "Telefon",
+      "email": "E-posta",
+      "address": "Adres",
+      "workingHours": "Çalışma Saatleri",
+      "weekdays": "Pazartesi - Cuma: 09:00 - 18:00",
+      "saturday": "Cumartesi: 10:00 - 16:00",
+      "sunday": "Pazar: Kapalı"
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "desc": "Şirketimiz ve değerlerimiz hakkında daha fazla bilgi edinin."
+  },
+  "category": {
+    "productsListTitle": "Ürünler",
+    "subCategories": "Alt Kategoriler",
+    "mainCategory": "Ana Kategori"
+  },
+  "error": {
+    "title": "Bir şeyler ters gitti!",
+    "sorry": "Üzgünüz, beklenmeyen bir hata oluştu.",
+    "tryAgain": "Tekrar dene",
+    "returnHome": "Ana sayfaya dön"
+  }
+}
