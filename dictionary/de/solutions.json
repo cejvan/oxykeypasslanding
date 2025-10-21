@@ -1,0 +1,142 @@
+{
+  "solutions": {
+    "title": "Branchenlösungen",
+    "subtitle": "Digitale Zugangskontrolllösungen, die speziell für die Bedürfnisse jeder Branche entwickelt wurden",
+    "sectorsTitle": "In Welchen Branchen Wird Es Verwendet?",
+    "sectorsSubtitle": "OxyKeyPass bietet flexible und anpassbare Lösungen, um den besonderen Bedürfnissen verschiedener Branchen gerecht zu werden",
+    "sectors": {
+      "banking": {
+        "title": "Bankwesen",
+        "description": "Digitale Zugangskontrolle für Bankfilialen, Geldautomaten-Bereiche und sichere Büros",
+        "features": [
+          "Zugangskontrolle für Geldautomaten-Bereiche",
+          "Sicherer Bürozugang",
+          "Kundenservice-Bereiche",
+          "Tresor- und Safezugang",
+          "Mitarbeiterauthentifizierung"
+        ],
+        "benefits": [
+          "Hohe Sicherheitsstandards",
+          "DSGVO-konforme Datenverwaltung",
+          "Zentralisierte Zugangskontrolle",
+          "Detaillierte Zugangsprotokolle"
+        ]
+      },
+      "healthcare": {
+        "title": "Gesundheitswesen",
+        "description": "Sicheres Zugangssystem für Krankenhäuser, Kliniken und Gesundheitszentren",
+        "features": [
+          "Patientenzimmer-Zugang",
+          "Operationssaal-Kontrolle",
+          "Apothekenzugang",
+          "Personalbereiche",
+          "Notdienst-Kontrolle"
+        ],
+        "benefits": [
+          "Patientenschutz der Privatsphäre",
+          "Hygienestandards",
+          "Notfallzugang",
+          "Personalberechtigung"
+        ]
+      },
+      "fitness": {
+        "title": "Sport & Fitness",
+        "description": "Mitgliederverwaltung für Fitnessstudios, Fitnesszentren und Sporteinrichtungen",
+        "features": [
+          "Mitglieder-Ein- und Ausgangsverfolgung",
+          "Sportbereich-Zugang",
+          "Schließfach-System",
+          "Personalbereiche",
+          "Private Trainingsräume"
+        ],
+        "benefits": [
+          "24/7-Zugangsmöglichkeit",
+          "Mitgliederverwaltung",
+          "Nutzungsstatistiken",
+          "Sicherer Gerätezugang"
+        ]
+      },
+      "corporate": {
+        "title": "Unternehmensbüros",
+        "description": "Zugangskontrolle für große Unternehmen, Bürogebäude und Unternehmenszentren",
+        "features": [
+          "Stockwerkbasierte Zugangskontrolle",
+          "Besprechungsraum-Reservierungen",
+          "Mitarbeiter-Ein- und Ausgangsverfolgung",
+          "Gastverwaltung",
+          "Parkbereich-Kontrolle"
+        ],
+        "benefits": [
+          "Zentralisierte Verwaltung",
+          "Flexible Berechtigung",
+          "Berichtssystem",
+          "Integriertes Mitarbeitersystem"
+        ]
+      },
+      "education": {
+        "title": "Bildungseinrichtungen",
+        "description": "Sicheres Zugangssystem für Schulen, Universitäten und Ausbildungszentren",
+        "features": [
+          "Klassenzimmer-Zugangskontrolle",
+          "Laborsicherheit",
+          "Bibliothekszugang",
+          "Lehrerzimmer",
+          "Sporthallen-Kontrolle"
+        ],
+        "benefits": [
+          "Schülersicherheit",
+          "Schutz von Unterrichtsmaterialien",
+          "Zeitbasierter Zugang",
+          "Eltern-Tracking-System"
+        ]
+      },
+      "manufacturing": {
+        "title": "Produktion / Industrie",
+        "description": "Sicherheitssystem für Fabriken, Produktionsanlagen und Industriegebiete",
+        "features": [
+          "Produktionslinien-Zugang",
+          "Maschinenraum-Kontrolle",
+          "Lagersicherheit",
+          "Mitarbeiter-Schichtverfolgung",
+          "Qualitätskontrollbereiche"
+        ],
+        "benefits": [
+          "Arbeitssicherheit gewährleistet",
+          "Maschinenschutz",
+          "Schichtverwaltung",
+          "Qualitätskontrolle"
+        ]
+      }
+    },
+    "whyOxyKeyPass": {
+      "title": "Warum OxyKeyPass?",
+      "subtitle": "Zuverlässige und effektive Lösungen in allen Branchen",
+      "security": {
+        "title": "Hohe Sicherheit",
+        "description": "Ihre Daten sind mit Banken-Sicherheitsstandards geschützt."
+      },
+      "speed": {
+        "title": "Schnelle Einrichtung",
+        "description": "Aktivieren Sie Ihr System innerhalb von 24 Stunden und beginnen Sie mit der Nutzung."
+      },
+      "reporting": {
+        "title": "Detaillierte Berichte",
+        "description": "Optimieren Sie Ihr Geschäft mit Nutzungsstatistiken und Zugangsberichten."
+      },
+      "mobile": {
+        "title": "Mobile Lösung",
+        "description": "Greifen Sie von überall mit iOS- und Android-Anwendungen zu."
+      }
+    },
+    "cta": {
+      "title": "Branchenspezifische Lösung",
+      "subtitle": "Angepasstes Zugangskontrollsystem entsprechend Ihren Geschäftsanforderungen",
+      "freeConsultation": "Kostenlose Beratung",
+      "productDetails": "Produktdetails",
+      "requestDemo": "Demo Anfordern"
+    },
+    "features": "Eigenschaften",
+    "benefits": "Vorteile",
+    "getDetails": "Details Abrufen"
+  }
+}

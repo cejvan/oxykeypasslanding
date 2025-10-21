@@ -1,0 +1,89 @@
+{
+  "models": {
+    "title": "Models",
+    "subtitle": "Discover all components of the OxyKeyPass system",
+    "overview": {
+      "title": "System Models",
+      "subtitle": "Each model serves a different function and together they create a powerful system"
+    },
+    "mobileApp": {
+      "title": "Mobile App",
+      "description": "iOS and Android application where users can read QR codes and gain access",
+      "features": {
+        "0": "QR code reading",
+        "1": "Google/Apple account login",
+        "2": "Email registration",
+        "3": "Easy-to-use interface"
+      }
+    },
+    "generalApi": {
+      "title": "General API",
+      "description": "Central authentication and routing system",
+      "features": {
+        "0": "User management",
+        "1": "Company management",
+        "2": "Device management",
+        "3": "Central identity provider"
+      }
+    },
+    "companyApi": {
+      "title": "Company API",
+      "description": "Local authorization system where each company manages its own on-premise database",
+      "features": {
+        "0": "Local data management",
+        "1": "Customer authorization",
+        "2": "Device control",
+        "3": "WebSocket integration"
+      }
+    },
+    "deviceIntegration": {
+      "title": "Device Integration",
+      "description": "Raspberry Pi-based system that controls physical devices",
+      "features": {
+        "0": "Raspberry Pi 4 support",
+        "1": "WiFi connection",
+        "2": "GPIO pins",
+        "3": "Security protocols"
+      }
+    },
+    "adminPanels": {
+      "title": "Admin Panels",
+      "description": "Web interfaces for system management and control",
+      "features": {
+        "0": "General admin panel",
+        "1": "Company admin panel",
+        "2": "User search",
+        "3": "Access logs"
+      }
+    },
+    "architecture": {
+      "title": "System Architecture",
+      "subtitle": "See how all components work together",
+      "mobile": {
+        "title": "Mobile App",
+        "description": "User interface and QR code reading"
+      },
+      "api": {
+        "title": "General API",
+        "description": "Central identity and routing"
+      },
+      "company": {
+        "title": "Company API",
+        "description": "Local authorization and control"
+      },
+      "device": {
+        "title": "Physical Device",
+        "description": "Turnstiles, locks and access points"
+      }
+    },
+    "features": "Features",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Build Your System",
+      "subtitle": "Modular solution customized according to your needs",
+      "freeConsultation": "Free Consultation",
+      "productDetails": "Product Details",
+      "requestDemo": "Request Demo"
+    }
+  }
+}

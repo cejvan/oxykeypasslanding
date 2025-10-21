@@ -4,28 +4,62 @@
     "product": "Ürün"
   },
   "product": {
-    "title": "Dijital Geçiş Yönetim Sistemi",
-    "subtitle": "İşletmenizin giriş-çıkış süreçlerini dijitalleştirin. Kart, QR kod veya mobil cihaz ile hızlı ve temassız geçiş imkanı sağlayın.",
+    "title": "OxyKeyPass Sistemi",
+    "subtitle": "Akıllı geçiş sistemi için gerekli tüm bileşenler. Mobil uygulama, yönetim panelleri ve cihaz entegrasyonu bir arada.",
     "freeTrial": "Ücretsiz Deneme",
     "downloadDemo": "Demo İndir",
-    "whyOxyKeyPass": "Neden OxyKeyPass?",
-    "whyOxyKeyPassDesc": "Modern teknoloji ile geleneksel geçiş sistemlerini birleştiren akıllı çözüm",
     "features": {
       "mobileApp": {
         "title": "Mobil Uygulama",
-        "description": "iOS ve Android uygulaması ile her yerden erişim"
+        "description": "iOS ve Android uygulaması ile QR kod okuma ve geçiş yapma"
       },
       "qrCode": {
         "title": "QR Kod Sistemi",
-        "description": "Temassız ve hızlı geçiş imkanı"
+        "description": "Güvenli ve hızlı geçiş için QR kod teknolojisi"
       },
       "security": {
-        "title": "Güvenlik",
-        "description": "Endüstri standardı güvenlik protokolleri"
+        "title": "Yüksek Güvenlik",
+        "description": "Bankacılık seviyesinde güvenlik standartları"
       },
       "timeTracking": {
         "title": "Zaman Takibi",
-        "description": "Detaylı giriş-çıkış raporları"
+        "description": "Detaylı giriş-çıkış kayıtları ve raporlama"
+      }
+    },
+    "whyOxyKeyPass": "Neden OxyKeyPass?",
+    "whyOxyKeyPassDesc": "Modern teknoloji ile geleneksel geçiş sistemlerini birleştiren akıllı çözüm",
+    "modules": {
+      "title": "Sistem Bileşenleri",
+      "subtitle": "OxyKeyPass, 5 temel bileşenden oluşan modüler bir sistemdir. Her bileşen farklı bir işlevi yerine getirir ve birlikte güvenli erişim kontrolü sağlar.",
+      "mobileApp": {
+        "title": "Mobil Uygulama",
+        "description": "Kullanıcıların QR kod okuması ve geçiş yapması için iOS ve Android uygulaması. Basit arayüz ile herkes kolayca kullanabilir.",
+        "features": ["QR kod okuma", "Geçiş geçmişi", "Bildirimler", "Kullanıcı profili"]
+      },
+      "adminPanels": {
+        "title": "Firma Yönetim Paneli",
+        "description": "Her firmanın kendi on-premise veritabanını yönettiği panel. Kullanıcıları, cihazları ve yetkileri kendi bilgisayarında yönetin.",
+        "features": ["Lokal kullanıcı yönetimi", "Cihaz kontrolü", "Raporlar", "Yetki tanımlama"]
+      },
+      "deviceIntegration": {
+        "title": "Cihaz Entegrasyonu",
+        "description": "Turnike, kapı kilidi, dolap kilidi gibi fiziksel cihazlarla entegrasyon. Raspberry Pi ile kontrol edilir.",
+        "features": ["Raspberry Pi desteği", "WebSocket iletişim", "Fiziksel kontrol", "Güvenlik protokolleri"]
+      },
+      "generalApi": {
+        "title": "Genel API",
+        "description": "Merkezi kimlik doğrulama sistemi. Kullanıcıları tanır ve doğru şirkete yönlendirir. Tüm sistemin kalbi.",
+        "features": ["Kullanıcı kimlik doğrulama", "Şirket yönlendirme", "Güvenli iletişim", "Merkezi yönetim"]
+      },
+      "companyApi": {
+        "title": "Firma API",
+        "description": "Her şirketin kendi bilgisayarında çalışan yetkilendirme sistemi. Veriler lokal olarak saklanır, güvenlik maksimum.",
+        "features": ["Lokal veri saklama", "Yetkilendirme kontrolü", "WebSocket tetikleme", "Güvenli erişim"]
+      },
+      "workflow": {
+        "title": "Koordinasyon",
+        "description": "5 bileşenin birlikte çalışma süreci. QR kod okuma, kimlik doğrulama, yetkilendirme ve cihaz kontrolü.",
+        "features": ["QR kod okuma", "Kimlik doğrulama", "Yetkilendirme kontrolü", "Cihaz açma"]
       }
     },
     "benefits": {
@@ -48,11 +82,592 @@
         "description": "KVKK ve GDPR uyumlu"
       }
     },
+    "howItWorks": {
+      "title": "Nasıl Çalışır?",
+      "subtitle": "3 basit adımda güvenli erişim",
+      "steps": {
+        "step1": {
+          "title": "QR Kodu Okutun",
+          "description": "Telefonunuzla kapıdaki QR kodu okutun. Sistem sizi tanır"
+        },
+        "step2": {
+          "title": "Yetki Kontrolü",
+          "description": "Sistem kontrol eder: Bu kişi bu kapıdan geçebilir mi?"
+        },
+        "step3": {
+          "title": "Kapı Açılır",
+          "description": "Yetkiniz varsa kapı anında açılır. Geçiş kaydedilir"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Kullanım Alanları",
+      "subtitle": "OxyKeyPass'i hangi sektörlerde kullanabilirsiniz?",
+      "cases": {
+        "office": {
+          "title": "Ofisler",
+          "description": "Çalışanlar ofise girerken turnike, özel odalara girerken kapı kilidi kullanır"
+        },
+        "factory": {
+          "title": "Fabrikalar",
+          "description": "Çalışanlar fabrika kapısından girer, makine odalarına erişim sağlar"
+        },
+        "hospital": {
+          "title": "Hastaneler",
+          "description": "Doktorlar hasta odalarına, hemşireler ilaç odalarına güvenle girer"
+        },
+        "school": {
+          "title": "Okullar",
+          "description": "Öğretmenler sınıflara, öğrenciler laboratuvarlara yetkili erişim yapar"
+        },
+        "warehouse": {
+          "title": "Depolar",
+          "description": "Çalışanlar depo kapılarından girer, forklift kullanım alanlarına erişir"
+        },
+        "retail": {
+          "title": "Mağazalar",
+          "description": "Personel mağaza kapılarından girer, kasalara ve stok odalarına erişir"
+        }
+      }
+    },
+    "technicalSpecs": {
+      "title": "Sistem Özellikleri",
+      "subtitle": "OxyKeyPass'in güçlü altyapısı",
+      "specs": {
+        "security": {
+          "title": "Güvenlik",
+          "items": [
+            "Kimlik doğrulama merkezi yapılır",
+            "Her şirket kendi verisini saklar",
+            "QR kodlar güvenli şekilde imzalanır",
+            "Anlık güvenli iletişim"
+          ]
+        },
+        "performance": {
+          "title": "Hız",
+          "items": [
+            "Anlık kapı açma",
+            "Hızlı veri işleme",
+            "İstediğiniz kadar kullanıcı",
+            "Küçük bilgisayarlarla çalışır"
+          ]
+        },
+        "integration": {
+          "title": "Sistem Bileşenleri",
+          "items": [
+            "Telefon uygulaması (iOS/Android)",
+            "Merkezi yönetim sistemi",
+            "Şirket yönetim sistemi",
+            "Yönetici panelleri"
+          ]
+        },
+        "support": {
+          "title": "Yönetim",
+          "items": [
+            "Merkezi yönetim paneli",
+            "Şirket yönetim paneli",
+            "Kullanıcı arama ve eşleme",
+            "Sistem durumu takibi"
+          ]
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Müşteri Yorumları",
+      "subtitle": "OxyKeyPass kullanan işletmeler ne diyor?",
+      "reviews": {
+        "review1": {
+          "name": "Enes Keskin",
+          "company": "EnFit",
+          "position": "Genel Müdür",
+          "content": "OxyKeyPass sayesinde güvenlik seviyemizi önemli ölçüde artırdık. Kurulum çok kolaydı ve personelimiz hızla adapte oldu.",
+          "rating": 5
+        },
+        "review2": {
+          "name": "Elif Demir",
+          "company": "MediHealth Hastanesi",
+          "position": "Güvenlik Sorumlusu",
+          "content": "Hastanemizde hasta ve personel güvenliği için OxyKeyPass kullanıyoruz. Çok güvenilir ve kullanıcı dostu bir sistem.",
+          "rating": 5
+        },
+        "review3": {
+          "name": "Mehmet Kaya",
+          "company": "EduTech Okulları",
+          "position": "Okul Müdürü",
+          "content": "Okulumuzda öğrenci giriş-çıkış takibi için OxyKeyPass'i tercih ettik. Hem güvenli hem de pratik bir çözüm.",
+          "rating": 5
+        }
+      }
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "OxyKeyPass hakkında merak ettikleriniz",
+      "questions": {
+        "q1": {
+          "question": "OxyKeyPass nasıl çalışır?",
+          "answer": "Telefonunuzla QR kodu okutun, sistem sizi tanır, yetkiniz varsa kapı açılır. Çok basit!"
+        },
+        "q2": {
+          "question": "Verilerim güvende mi?",
+          "answer": "Evet! Her şirket kendi verisini kendi bilgisayarında saklar. Kimse sizin verilerinizi göremez."
+        },
+        "q3": {
+          "question": "Hangi kapılarla çalışır?",
+          "answer": "Turnike, dolap kilidi, oda kapısı... Kısacası her türlü kapı ile çalışır. Küçük bilgisayar (Raspberry Pi) ile kontrol edilir."
+        },
+        "q4": {
+          "question": "Yönetim nasıl yapılır?",
+          "answer": "İki tür yönetim paneli var: Merkezi yönetim ve şirket yönetimi. Her şirket kendi çalışanlarını yönetir."
+        },
+        "q5": {
+          "question": "Kurulum zor mu?",
+          "answer": "Hayır! Sistem kurulumu, kapı bağlantısı ve çalışan kayıtları yapılır. Teknik ekip yardım eder."
+        }
+      }
+    },
     "cta": {
       "title": "Hemen Başlamaya Hazır mısınız?",
       "subtitle": "14 gün ücretsiz deneme ile OxyKeyPass'in gücünü keşfedin",
       "startFreeTrial": "Ücretsiz Deneme Başlat",
       "requestDemo": "Demo Talep Et"
-    }
+    },
+    "adminPanelsPage": {
+      "features": {
+        "title": "Firma Yönetim Paneli Özellikleri",
+        "subtitle": "Her firmanın kendi verilerini yönettiği güvenli panel",
+        "localUserManagement": {
+          "title": "Lokal Kullanıcı Yönetimi",
+          "description": "Çalışanlarınızı kendi bilgisayarınızda yönetin."
+        },
+        "deviceControl": {
+          "title": "Cihaz Kontrolü",
+          "description": "Hangi cihazların aktif olduğunu görün ve kontrol edin."
+        },
+        "reports": {
+          "title": "Detaylı Raporlar",
+          "description": "Geçiş kayıtları, kullanım istatistikleri ve analizler."
+        },
+        "permissionDefinition": {
+          "title": "Yetki Tanımlama",
+          "description": "Hangi çalışanın hangi kapıdan geçebileceğini belirleyin."
+        }
+      },
+      "onPremise": {
+        "title": "Neden On-Premise?",
+        "subtitle": "Verilerinizi kendi bilgisayarınızda saklamanın avantajları",
+        "dataSecurity": {
+          "title": "Maksimum Veri Güvenliği",
+          "description": "Verileriniz kendi sunucunuzda saklanır. Dışarıya çıkmaz.",
+          "features": ["Lokal veri saklama", "Dış erişim yok", "KVKK uyumlu"]
+        },
+        "fastAccess": {
+          "title": "Hızlı Erişim",
+          "description": "Verileriniz lokal olduğu için çok hızlı işlem yapabilirsiniz.",
+          "features": ["Anlık veri erişimi", "İnternet bağımsız", "Yüksek performans"]
+        },
+        "fullControl": {
+          "title": "Tam Kontrol",
+          "description": "Sistemin tamamen sizin kontrolünüzde olması.",
+          "features": ["Bağımsız yönetim", "Özelleştirilebilir", "Güncelleme kontrolü"]
+        }
+      },
+      "managementFeatures": {
+        "title": "Yönetim Özellikleri",
+        "subtitle": "Firma yönetim panelinde neler yapabilirsiniz?",
+        "employeeManagement": {
+          "title": "Çalışan Yönetimi",
+          "features": ["Yeni çalışan ekleme", "Çalışan bilgilerini güncelleme", "Yetki atama"]
+        },
+        "deviceManagement": {
+          "title": "Cihaz Yönetimi",
+          "features": ["Cihaz durumu kontrolü", "Cihaz ekleme/çıkarma", "Bakım takibi"]
+        },
+        "reporting": {
+          "title": "Raporlama",
+          "features": ["Geçiş raporları", "Kullanım istatistikleri", "Excel export"]
+        },
+        "permissionManagement": {
+          "title": "Yetki Yönetimi",
+          "features": ["Rol tanımlama", "Zaman bazlı yetkiler", "Acil durum erişimi"]
+        }
+      }
+    },
+    "mobileAppPage": {
+      "features": {
+        "title": "Mobil Uygulama Özellikleri",
+        "subtitle": "Kullanıcıların güvenli geçiş yapması için tasarlanmış özellikler",
+        "qrCodeReading": {
+          "title": "QR Kod Okuma",
+          "description": "Kapıdaki QR kodu telefonunuzla okutun. Sistem anında sizi tanır ve yetkinizi kontrol eder."
+        },
+        "accessHistory": {
+          "title": "Geçiş Geçmişi",
+          "description": "Tüm geçişlerinizi görüntüleyin. Hangi kapıdan, ne zaman geçtiğinizi takip edin."
+        },
+        "notifications": {
+          "title": "Anlık Bildirimler",
+          "description": "Geçiş durumunuz hakkında anında bilgilendirme alın. Başarılı geçişler ve uyarılar."
+        },
+        "userProfile": {
+          "title": "Kullanıcı Profili",
+          "description": "Kişisel bilgilerinizi görüntüleyin ve güncelleyin. Yetkilerinizi kontrol edin."
+        }
+      },
+      "howItWorks": {
+        "title": "Nasıl Çalışır?",
+        "subtitle": "3 basit adımda güvenli geçiş yapın",
+        "step1": {
+          "title": "QR Kodu Okutun",
+          "description": "Telefonunuzun kamerasını kapıdaki QR koda doğrultun. Uygulama otomatik olarak kodu okur."
+        },
+        "step2": {
+          "title": "Yetki Kontrolü",
+          "description": "Sistem kimliğinizi doğrular ve bu kapıdan geçiş yetkinizi kontrol eder."
+        },
+        "step3": {
+          "title": "Kapı Açılır",
+          "description": "Yetkiniz varsa kapı anında açılır. Geçiş kaydedilir ve size bildirim gönderilir."
+        }
+      },
+      "benefits": {
+        "title": "Neden Mobil Uygulama?",
+        "subtitle": "Geleneksel anahtar ve kart sistemlerine göre avantajları",
+        "security": {
+          "title": "Yüksek Güvenlik",
+          "description": "Telefonunuzun güvenlik özellikleri ile birlikte çalışır. Biyometrik kimlik doğrulama desteği.",
+          "features": {
+            "0": "Parmak izi ve yüz tanıma",
+            "1": "Şifreli iletişim",
+            "2": "Anlık yetki iptali"
+          }
+        },
+        "speed": {
+          "title": "Hızlı Geçiş",
+          "description": "QR kod okuma ve kapı açma işlemi saniyeler içinde tamamlanır.",
+          "features": {
+            "0": "Anında QR kod tanıma",
+            "1": "Hızlı yetki kontrolü",
+            "2": "Anlık kapı açma"
+          }
+        },
+        "easeOfUse": {
+          "title": "Kullanım Kolaylığı",
+          "description": "Basit arayüz ile herkes kolayca kullanabilir. Teknik bilgi gerektirmez.",
+          "features": {
+            "0": "Sezgisel tasarım",
+            "1": "Türkçe arayüz",
+            "2": "Kolay kurulum"
+          }
+        }
+      },
+      "download": {
+        "title": "OxyKeyPass Mobil Uygulaması",
+        "subtitle": "iOS ve Android cihazlarınız için ücretsiz indirin",
+        "appStore": "App Store'dan İndir",
+        "googlePlay": "Google Play'den İndir"
+      }
+    },
+    "generalApiPage": {
+      "features": {
+        "title": "Genel API Özellikleri",
+        "subtitle": "Merkezi kimlik doğrulama ve yönlendirme sistemi",
+        "authentication": {
+          "title": "Kullanıcı Kimlik Doğrulama",
+          "description": "Tüm kullanıcıların merkezi kimlik doğrulama sistemi"
+        },
+        "routing": {
+          "title": "Şirket Yönlendirme",
+          "description": "Kullanıcıları doğru şirkete yönlendirme"
+        },
+        "security": {
+          "title": "Güvenli İletişim",
+          "description": "Şifreli ve güvenli veri transferi"
+        },
+        "management": {
+          "title": "Merkezi Yönetim",
+          "description": "Tüm sistemin merkezi kontrolü"
+        }
+      },
+      "architecture": {
+        "title": "Mimari Yapı",
+        "subtitle": "Genel API'nin sistem içindeki rolü",
+        "centralHub": {
+          "title": "Merkezi Hub",
+          "description": "Tüm sistemin kalbi olarak çalışır"
+        },
+        "userManagement": {
+          "title": "Kullanıcı Yönetimi",
+          "description": "Global kullanıcı veritabanı yönetimi"
+        },
+        "companyRouting": {
+          "title": "Şirket Yönlendirme",
+          "description": "Doğru şirkete yönlendirme sistemi"
+        }
+      },
+      "benefits": {
+        "title": "Neden Genel API?",
+        "subtitle": "Merkezi sistemin avantajları",
+        "centralized": {
+          "title": "Merkezi Kontrol",
+          "description": "Tek noktadan tüm sistemi yönetin",
+          "features": {
+            "0": "Tek giriş noktası",
+            "1": "Merkezi kullanıcı yönetimi",
+            "2": "Global güvenlik politikaları"
+          }
+        },
+        "scalability": {
+          "title": "Ölçeklenebilirlik",
+          "description": "Büyüyen işletmenize uyum sağlar",
+          "features": {
+            "0": "Sınırsız kullanıcı",
+            "1": "Çoklu şirket desteği",
+            "2": "Yüksek performans"
+          }
+        },
+        "security": {
+          "title": "Güvenlik",
+          "description": "En yüksek güvenlik standartları",
+          "features": {
+            "0": "Şifreli iletişim",
+            "1": "Güvenli kimlik doğrulama",
+            "2": "Veri koruması"
+          }
+        }
+      }
+    },
+    "companyApiPage": {
+      "features": {
+        "title": "Firma API Özellikleri",
+        "subtitle": "Her firmanın kendi on-premise yetkilendirme sistemi",
+        "localData": {
+          "title": "Lokal Veri Saklama",
+          "description": "Verileriniz kendi sunucunuzda saklanır"
+        },
+        "authorization": {
+          "title": "Yetkilendirme Kontrolü",
+          "description": "Lokal yetkilendirme kararları"
+        },
+        "websocket": {
+          "title": "WebSocket Tetikleme",
+          "description": "Cihazlara anlık komut gönderimi"
+        },
+        "security": {
+          "title": "Güvenli Erişim",
+          "description": "Maksimum güvenlik ile veri koruması"
+        }
+      },
+      "onPremise": {
+        "title": "On-Premise Avantajları",
+        "subtitle": "Kendi sunucunuzda çalışmanın faydaları",
+        "dataControl": {
+          "title": "Veri Kontrolü",
+          "description": "Verileriniz tamamen sizin kontrolünüzde",
+          "features": {
+            "0": "Lokal veri saklama",
+            "1": "Dış erişim yok",
+            "2": "Tam kontrol"
+          }
+        },
+        "performance": {
+          "title": "Yüksek Performans",
+          "description": "Lokal sistemler çok daha hızlıdır",
+          "features": {
+            "0": "Anlık erişim",
+            "1": "Düşük gecikme",
+            "2": "Yüksek hız"
+          }
+        },
+        "compliance": {
+          "title": "Uyumluluk",
+          "description": "KVKK ve GDPR uyumlu",
+          "features": {
+            "0": "Veri gizliliği",
+            "1": "Yasal uyumluluk",
+            "2": "Güvenlik standartları"
+          }
+        }
+      }
+    },
+    "deviceIntegrationPage": {
+      "features": {
+        "title": "Cihaz Entegrasyonu Özellikleri",
+        "subtitle": "Fiziksel cihazlarla güvenli bağlantı sistemi",
+        "raspberryPi": {
+          "title": "Raspberry Pi Desteği",
+          "description": "Küçük ve güçlü kontrol ünitesi"
+        },
+        "websocket": {
+          "title": "WebSocket İletişim",
+          "description": "Anlık cihaz kontrolü"
+        },
+        "physicalControl": {
+          "title": "Fiziksel Kontrol",
+          "description": "Kapı, turnike ve kilit kontrolü"
+        },
+        "security": {
+          "title": "Güvenlik Protokolleri",
+          "description": "Endüstri standardı güvenlik"
+        }
+      },
+      "devices": {
+        "title": "Desteklenen Cihazlar",
+        "subtitle": "Hangi cihazlarla çalışır?",
+        "turnstiles": {
+          "title": "Turnikeler",
+          "description": "Geçiş kontrolü için turnike sistemleri",
+          "features": {
+            "0": "Elektronik turnike",
+            "1": "Mekanik turnike",
+            "2": "Döner kapı"
+          }
+        },
+        "doorLocks": {
+          "title": "Kapı Kilitleri",
+          "description": "Elektronik kapı kilit sistemi",
+          "features": {
+            "0": "Elektronik kilit",
+            "1": "Manyetik kilit",
+            "2": "Otomatik kapı"
+          }
+        },
+        "lockers": {
+          "title": "Dolap Kilitleri",
+          "description": "Kilitli dolap kontrolü",
+          "features": {
+            "0": "Elektronik dolap kilit",
+            "1": "Ekipman dolabı",
+            "2": "Güvenlik dolabı"
+          }
+        }
+      },
+      "installation": {
+        "title": "Kurulum Süreci",
+        "subtitle": "3 adımda cihaz entegrasyonu",
+        "step1": {
+          "title": "Cihaz Bağlantısı",
+          "description": "Raspberry Pi'yi cihaza bağlayın",
+          "features": {
+            "0": "Raspberry Pi 4 (önerilen)",
+            "1": "WiFi bağlantısı",
+            "2": "GPIO pinleri",
+            "3": "Güç adaptörü"
+          }
+        },
+        "step2": {
+          "title": "Yazılım Kurulumu",
+          "description": "Kontrol yazılımını yükleyin",
+          "features": {
+            "0": "Node.js runtime",
+            "1": "WebSocket desteği",
+            "2": "GPIO kütüphaneleri",
+            "3": "Güvenlik protokolleri"
+          }
+        },
+        "step3": {
+          "title": "Test ve Aktivasyon",
+          "description": "Sistemi test edin ve aktif edin",
+          "features": {
+            "0": "Raspberry Pi kurulumu",
+            "1": "Yazılım yükleme",
+            "2": "Cihaz bağlantısı",
+            "3": "Test ve doğrulama"
+          }
+        }
+      }
+    },
+    "workflowPage": {
+      "features": {
+        "title": "Koordinasyon Süreci",
+        "subtitle": "5 bileşenin birlikte çalışma süreci",
+        "qrReading": {
+          "title": "QR Kod Okuma",
+          "description": "Mobil uygulama ile QR kod okuma"
+        },
+        "authentication": {
+          "title": "Kimlik Doğrulama",
+          "description": "Genel API'de kullanıcı doğrulama"
+        },
+        "authorization": {
+          "title": "Yetkilendirme Kontrolü",
+          "description": "Firma API'de yetki kontrolü"
+        },
+        "deviceControl": {
+          "title": "Cihaz Açma",
+          "description": "Fiziksel cihazın açılması"
+        }
+      },
+      "process": {
+        "title": "Geçiş Süreci",
+        "subtitle": "Adım adım geçiş akışı",
+        "step1": {
+          "title": "QR Kod Okuma",
+          "description": "Kullanıcı QR kodu okur",
+          "features": {
+            "0": "QR kod taranır",
+            "1": "Cihaz bilgisi alınır",
+            "2": "Genel API'ye gönderilir"
+          }
+        },
+        "step2": {
+          "title": "Kimlik Doğrulama",
+          "description": "Genel API kullanıcıyı doğrular",
+          "features": {
+            "0": "Kullanıcı kimliği kontrol edilir",
+            "1": "Şirket bilgisi belirlenir",
+            "2": "Firma API'sine yönlendirilir"
+          }
+        },
+        "step3": {
+          "title": "Şirket Yönlendirme",
+          "description": "Doğru şirkete yönlendirme"
+        },
+        "step4": {
+          "title": "Yetki Kontrolü",
+          "description": "Firma API yetkiyi kontrol eder",
+          "features": {
+            "0": "Lokal veri kontrol edilir",
+            "1": "Yetki durumu belirlenir",
+            "2": "Cihaza komut gönderilir"
+          }
+        },
+        "step5": {
+          "title": "Cihaz Açma",
+          "description": "WebSocket ile cihaz açılır"
+        }
+      },
+      "benefits": {
+        "title": "Koordinasyon Avantajları",
+        "subtitle": "Birlikte çalışmanın faydaları",
+        "efficiency": {
+          "title": "Yüksek Verimlilik",
+          "description": "Hızlı ve güvenli geçiş",
+          "features": {
+            "0": "Anında işlem",
+            "1": "Otomatik kontrol",
+            "2": "Hata yok"
+          }
+        },
+        "security": {
+          "title": "Güvenlik",
+          "description": "Çok katmanlı güvenlik",
+          "features": {
+            "0": "Kimlik doğrulama",
+            "1": "Yetki kontrolü",
+            "2": "Güvenli iletişim"
+          }
+        },
+        "reliability": {
+          "title": "Güvenilirlik",
+          "description": "7/24 kesintisiz çalışma",
+          "features": {
+            "0": "Yedekli sistem",
+            "1": "Otomatik yeniden bağlantı",
+            "2": "Hata toleransı"
+          }
+        }
+      }
+    },
+    "viewDetails": "Detayları Gör"
   }
 }

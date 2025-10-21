@@ -1,0 +1,65 @@
+{
+  "security": {
+    "title": "Security & Compliance",
+    "subtitle": "OxyKeyPass security standards and compliance certifications",
+    "features": {
+      "title": "Security Features",
+      "subtitle": "Banking-level security standards"
+    },
+    "encryption": {
+      "title": "Data Encryption",
+      "description": "All data is protected with end-to-end encryption"
+    },
+    "authentication": {
+      "title": "Authentication",
+      "description": "Multi-factor authentication system"
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "description": "GDPR and KVKK compliant data protection"
+    },
+    "auditLogs": {
+      "title": "Audit Logs",
+      "description": "All access operations are recorded in detail"
+    },
+    "compliance": {
+      "title": "Compliance Certifications",
+      "subtitle": "Compliance with international security standards",
+      "gdpr": {
+        "title": "GDPR Compliant",
+        "description": "Full compliance with European Union data protection regulation"
+      },
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Information security management system standard"
+      },
+      "sox": {
+        "title": "SOX Compliant",
+        "description": "Sarbanes-Oxley Act compliance"
+      }
+    },
+    "standards": {
+      "title": "Security Standards",
+      "subtitle": "Industry-standard security measures",
+      "encryption": {
+        "title": "Data Encryption",
+        "description": "AES-256 encryption standard"
+      },
+      "accessControl": {
+        "title": "Access Control",
+        "description": "Role-based access control (RBAC)"
+      },
+      "monitoring": {
+        "title": "24/7 Monitoring",
+        "description": "Continuous security monitoring and threat detection"
+      }
+    },
+    "cta": {
+      "title": "Build Your Secure System",
+      "subtitle": "System protected with the highest security standards",
+      "freeConsultation": "Free Consultation",
+      "productDetails": "Product Details",
+      "requestDemo": "Request Demo"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "solutions": {
+    "title": "Solutions Sectorielles",
+    "subtitle": "Solutions de contrôle d'accès numérique conçues spécifiquement pour les besoins de chaque secteur",
+    "sectorsTitle": "Dans Quels Secteurs Est-Elle Utilisée ?",
+    "sectorsSubtitle": "OxyKeyPass offre des solutions flexibles et personnalisables pour répondre aux besoins spécifiques de différents secteurs",
+    "sectors": {
+      "banking": {
+        "title": "Banque",
+        "description": "Contrôle d'accès numérique pour les succursales bancaires, les zones de guichets automatiques et les bureaux sécurisés",
+        "features": [
+          "Contrôle d'accès aux zones de guichets",
+          "Accès sécurisé aux bureaux",
+          "Zones de service client",
+          "Accès aux coffres-forts et chambres fortes",
+          "Authentification des employés"
+        ],
+        "benefits": [
+          "Normes de sécurité élevées",
+          "Gestion des données conforme au RGPD",
+          "Contrôle d'accès centralisé",
+          "Journaux d'accès détaillés"
+        ]
+      },
+      "healthcare": {
+        "title": "Secteur de la Santé",
+        "description": "Système d'accès sécurisé pour les hôpitaux, cliniques et centres de santé",
+        "features": [
+          "Accès aux chambres de patients",
+          "Contrôle des salles d'opération",
+          "Accès aux pharmacies",
+          "Zones du personnel",
+          "Contrôle des services d'urgence"
+        ],
+        "benefits": [
+          "Protection de la confidentialité des patients",
+          "Normes d'hygiène",
+          "Accès d'urgence",
+          "Autorisation du personnel"
+        ]
+      },
+      "fitness": {
+        "title": "Sports et Fitness",
+        "description": "Gestion d'adhésion pour les salles de sport, centres de fitness et installations sportives",
+        "features": [
+          "Suivi d'entrée-sortie des membres",
+          "Accès aux zones sportives",
+          "Système de casiers",
+          "Zones du personnel",
+          "Salles d'entraînement privées"
+        ],
+        "benefits": [
+          "Capacité d'accès 24/7",
+          "Gestion d'adhésion",
+          "Statistiques d'utilisation",
+          "Accès sécurisé aux équipements"
+        ]
+      },
+      "corporate": {
+        "title": "Bureaux d'Entreprise",
+        "description": "Contrôle d'accès pour les grandes entreprises, immeubles de bureaux et centres d'entreprise",
+        "features": [
+          "Contrôle d'accès par étage",
+          "Réservation de salles de réunion",
+          "Suivi d'entrée-sortie des employés",
+          "Gestion des invités",
+          "Contrôle des zones de stationnement"
+        ],
+        "benefits": [
+          "Gestion centralisée",
+          "Autorisation flexible",
+          "Système de rapports",
+          "Système d'employés intégré"
+        ]
+      },
+      "education": {
+        "title": "Institutions Éducatives",
+        "description": "Système d'accès sécurisé pour les écoles, universités et centres de formation",
+        "features": [
+          "Contrôle d'accès aux salles de classe",
+          "Sécurité des laboratoires",
+          "Accès aux bibliothèques",
+          "Salles des enseignants",
+          "Contrôle des gymnases"
+        ],
+        "benefits": [
+          "Sécurité des étudiants",
+          "Protection du matériel éducatif",
+          "Accès basé sur le temps",
+          "Système de suivi des parents"
+        ]
+      },
+      "manufacturing": {
+        "title": "Manufacture / Industrie",
+        "description": "Système de sécurité pour les usines, installations de production et zones industrielles",
+        "features": [
+          "Accès aux lignes de production",
+          "Contrôle des salles de machines",
+          "Sécurité des entrepôts",
+          "Suivi des équipes d'employés",
+          "Zones de contrôle qualité"
+        ],
+        "benefits": [
+          "Sécurité au travail garantie",
+          "Protection des machines",
+          "Gestion des équipes",
+          "Contrôle qualité"
+        ]
+      }
+    },
+    "whyOxyKeyPass": {
+      "title": "Pourquoi OxyKeyPass ?",
+      "subtitle": "Solutions fiables et efficaces dans tous les secteurs",
+      "security": {
+        "title": "Haute Sécurité",
+        "description": "Vos données sont protégées avec des normes de sécurité de niveau bancaire."
+      },
+      "speed": {
+        "title": "Installation Rapide",
+        "description": "Activez votre système en 24 heures et commencez à l'utiliser."
+      },
+      "reporting": {
+        "title": "Rapports Détaillés",
+        "description": "Optimisez votre entreprise avec des statistiques d'utilisation et des rapports d'accès."
+      },
+      "mobile": {
+        "title": "Solution Mobile",
+        "description": "Accédez de n'importe où avec les applications iOS et Android."
+      }
+    },
+    "cta": {
+      "title": "Solution Spécifique à Votre Secteur",
+      "subtitle": "Système de contrôle d'accès personnalisé selon les besoins de votre entreprise",
+      "freeConsultation": "Consultation Gratuite",
+      "productDetails": "Détails du Produit",
+      "requestDemo": "Demander une Démo"
+    },
+    "features": "Caractéristiques",
+    "benefits": "Avantages",
+    "getDetails": "Obtenir les Détails"
+  }
+}

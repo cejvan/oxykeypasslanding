@@ -49,19 +49,55 @@ export const ROUTES = {
         fr: "tarifs",
         de: "preise",
     },
-    resources: {
-        tr: "kaynaklar",
-        en: "resources",
-        es: "recursos",
-        fr: "ressources",
-        de: "ressourcen",
-    },
     contact: {
         tr: "iletisim",
         en: "contact",
         es: "contacto",
         fr: "contact",
         de: "kontakt"
+    },
+    // Product subpages
+    "product/mobile-app": {
+        tr: "urun/mobil-uygulama",
+        en: "product/mobile-app",
+        es: "producto/aplicacion-movil",
+        fr: "produit/application-mobile",
+        de: "produkt/mobile-app"
+    },
+    "product/general-api": {
+        tr: "urun/genel-api",
+        en: "product/general-api",
+        es: "producto/api-general",
+        fr: "produit/api-generale",
+        de: "produkt/general-api"
+    },
+    "product/device-integration": {
+        tr: "urun/cihaz-entegrasyonu",
+        en: "product/device-integration",
+        es: "producto/integracion-dispositivos",
+        fr: "produit/integration-appareils",
+        de: "produkt/geraete-integration"
+    },
+    "product/admin-panels": {
+        tr: "urun/yonetim-paneli",
+        en: "product/admin-panels",
+        es: "producto/paneles-administracion",
+        fr: "produit/panneaux-administration",
+        de: "produkt/admin-panels"
+    },
+    "product/company-api": {
+        tr: "urun/firma-api",
+        en: "product/company-api",
+        es: "producto/api-empresa",
+        fr: "produit/api-entreprise",
+        de: "produkt/unternehmen-api"
+    },
+    "product/workflow": {
+        tr: "urun/koordinasyon",
+        en: "product/workflow",
+        es: "producto/flujo-trabajo",
+        fr: "produit/flux-travail",
+        de: "produkt/arbeitsablauf"
     }
     // ...diğer rotalar buraya
 };

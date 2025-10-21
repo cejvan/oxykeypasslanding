@@ -12,12 +12,11 @@ type HeroProps = {
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
-  breadcrumbs?: Array<{ label: string; href?: string }>;
   ctas?: Array<{ label: string; href: string; variant?: 'primary' | 'outline' }>;
   backgroundImageUrl?: string;
 };
 
-const Hero = ({ title, subtitle, className, align = 'center', breadcrumbs = [], ctas = [], backgroundImageUrl }: HeroProps) => {
+const Hero = ({ title, subtitle, className, align = 'center', ctas = [], backgroundImageUrl }: HeroProps) => {
   return (
     <section className={cx('relative bg-gradient-to-br from-blue-50 to-indigo-100 mt-[0px]', className)} style={{ height: '400px' }}>
       {backgroundImageUrl && (
@@ -28,23 +27,6 @@ const Hero = ({ title, subtitle, className, align = 'center', breadcrumbs = [], 
       )}
       <div className="absolute inset-0 z-10 bg-white/50" />
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {!!breadcrumbs.length && (
-          <nav className="mb-5 text-sm text-left" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 text-gray-500">
-              {breadcrumbs.map((bc, i) => (
-                <li key={`${bc.label}-${i}`} className="inline-flex items-center">
-                  {bc.href ? (
-                    <Link href={bc.href} className="hover:text-gray-800 transition-colors">{bc.label}</Link>
-                  ) : (
-                    <span className="text-gray-600">{bc.label}</span>
-                  )}
-                  {i < breadcrumbs.length - 1 && <span className="mx-2">/</span>}
-                </li>
-              ))}
-            </ol>
-          </nav>
-        )}
-
         <div className={cx('p-0')}>
           {/* Always show brand logo (centered, larger) */}
           <div className="mb-6 flex justify-center">

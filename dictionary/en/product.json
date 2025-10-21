@@ -4,8 +4,8 @@
     "product": "Product"
   },
   "product": {
-    "title": "Digital Access Management System",
-    "subtitle": "Digitize your business access processes. Provide fast and contactless access with card, QR code or mobile device.",
+    "title": "Modular Digital Access Control Platform",
+    "subtitle": "Comprehensive platform providing digital authorization at physical access points (turnstiles, locker locks, special room doors). Manage all your access points with a single mobile app.",
     "freeTrial": "Free Trial",
     "downloadDemo": "Download Demo",
     "whyOxyKeyPass": "Why OxyKeyPass?",
@@ -28,6 +28,40 @@
         "description": "Detailed entry-exit reports"
       }
     },
+    "modules": {
+      "title": "System Components",
+      "subtitle": "OxyKeyPass is a modular system consisting of 5 core components. Each component serves a different function and together provides secure access control.",
+      "mobileApp": {
+        "title": "Mobile App",
+        "description": "iOS and Android app for users to read QR codes and access. Everyone can use it easily with a simple interface.",
+        "features": ["QR code reading", "Access history", "Notifications", "User profile"]
+      },
+      "adminPanels": {
+        "title": "Company Admin Panel",
+        "description": "Panel where each company manages its own on-premise database. Manage users, devices and permissions on your own computer.",
+        "features": ["Local user management", "Device control", "Reports", "Permission definition"]
+      },
+      "deviceIntegration": {
+        "title": "Device Integration",
+        "description": "Integration with physical devices such as turnstiles, door locks, locker locks. Controlled with Raspberry Pi.",
+        "features": ["Raspberry Pi support", "WebSocket communication", "Physical control", "Security protocols"]
+      },
+      "generalApi": {
+        "title": "General API",
+        "description": "Central authentication system. Recognizes users and directs them to the right company. The heart of the entire system.",
+        "features": ["User authentication", "Company routing", "Secure communication", "Central management"]
+      },
+      "companyApi": {
+        "title": "Company API",
+        "description": "Authorization system running on each company's own computer. Data is stored locally, security is maximum.",
+        "features": ["Local data storage", "Authorization control", "WebSocket triggering", "Secure access"]
+      },
+      "workflow": {
+        "title": "Coordination",
+        "description": "The process of 5 components working together. QR code reading, authentication, authorization and device control.",
+        "features": ["QR code reading", "Authentication", "Authorization control", "Device opening"]
+      }
+    },
     "benefits": {
       "title": "Our Advantages",
       "subtitle": "Take your business to the next level with OxyKeyPass",
@@ -48,11 +82,592 @@
         "description": "KVKK and GDPR compliant"
       }
     },
+    "howItWorks": {
+      "title": "How It Works?",
+      "subtitle": "Digital access management with OxyKeyPass in 3 simple steps",
+      "steps": {
+        "step1": {
+          "title": "Setup",
+          "description": "Install your system in 5 minutes and start using"
+        },
+        "step2": {
+          "title": "Add Users",
+          "description": "Add your employees to the system and define access permissions"
+        },
+        "step3": {
+          "title": "Access Management",
+          "description": "Secure access with QR code, card or mobile app"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Use Cases",
+      "subtitle": "In which sectors can you use OxyKeyPass?",
+      "cases": {
+        "office": {
+          "title": "Office Buildings",
+          "description": "Secure access control in multi-story office buildings"
+        },
+        "factory": {
+          "title": "Factories",
+          "description": "Personnel tracking and security in production facilities"
+        },
+        "hospital": {
+          "title": "Hospitals",
+          "description": "Patient and staff security in healthcare facilities"
+        },
+        "school": {
+          "title": "Educational Institutions",
+          "description": "Student and teacher access control in schools"
+        },
+        "warehouse": {
+          "title": "Warehouses",
+          "description": "Personnel and visitor management in logistics centers"
+        },
+        "retail": {
+          "title": "Retail",
+          "description": "Employee access control in stores and malls"
+        }
+      }
+    },
+    "technicalSpecs": {
+      "title": "Technical Specifications",
+      "subtitle": "OxyKeyPass technical infrastructure and security standards",
+      "specs": {
+        "security": {
+          "title": "Security",
+          "items": [
+            "256-bit SSL encryption",
+            "ISO 27001 certification",
+            "KVKK and GDPR compliant",
+            "Multi-factor authentication"
+          ]
+        },
+        "performance": {
+          "title": "Performance",
+          "items": [
+            "99.9% uptime guarantee",
+            "Microsecond response time",
+            "Unlimited user capacity",
+            "Real-time synchronization"
+          ]
+        },
+        "integration": {
+          "title": "Integration",
+          "items": [
+            "REST API support",
+            "Webhook integrations",
+            "LDAP/Active Directory",
+            "Existing turnstile systems"
+          ]
+        },
+        "support": {
+          "title": "Support",
+          "items": [
+            "24/7 technical support",
+            "Remote installation service",
+            "Comprehensive documentation",
+            "Training and consulting"
+          ]
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Customer Reviews",
+      "subtitle": "What do businesses using OxyKeyPass say?",
+      "reviews": {
+        "review1": {
+          "name": "Ahmet Yılmaz",
+          "company": "TechCorp Inc.",
+          "position": "IT Manager",
+          "content": "We significantly increased our security level thanks to OxyKeyPass. The installation was very easy and our staff quickly adapted.",
+          "rating": 5
+        },
+        "review2": {
+          "name": "Elif Demir",
+          "company": "MediHealth Hospital",
+          "position": "Security Officer",
+          "content": "We use OxyKeyPass for patient and staff security in our hospital. It's a very reliable and user-friendly system.",
+          "rating": 5
+        },
+        "review3": {
+          "name": "Mehmet Kaya",
+          "company": "EduTech Schools",
+          "position": "School Principal",
+          "content": "We chose OxyKeyPass for student access tracking at our school. It's both secure and practical.",
+          "rating": 5
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "What you wonder about OxyKeyPass",
+      "questions": {
+        "q1": {
+          "question": "Can I integrate OxyKeyPass with my existing turnstile system?",
+          "answer": "Yes, OxyKeyPass easily integrates with your existing turnstile systems. Only a motherboard replacement will be sufficient."
+        },
+        "q2": {
+          "question": "Can the system work offline?",
+          "answer": "Yes, OxyKeyPass can work in hybrid mode. Basic access operations continue even without internet connection."
+        },
+        "q3": {
+          "question": "How many users does it support?",
+          "answer": "OxyKeyPass has unlimited user capacity. It scales according to your needs."
+        },
+        "q4": {
+          "question": "How is data security ensured?",
+          "answer": "Data security is guaranteed with 256-bit SSL encryption, ISO 27001 certification and KVKK/GDPR compliance."
+        },
+        "q5": {
+          "question": "How long does installation take?",
+          "answer": "Basic installation is completed in 5 minutes. 1-2 days is sufficient for comprehensive integrations."
+        }
+      }
+    },
     "cta": {
       "title": "Ready to Get Started?",
       "subtitle": "Discover the power of OxyKeyPass with 14-day free trial",
       "startFreeTrial": "Start Free Trial",
       "requestDemo": "Request Demo"
-    }
+    },
+    "adminPanelsPage": {
+      "features": {
+        "title": "Company Admin Panel Features",
+        "subtitle": "Secure panel where each company manages its own data",
+        "localUserManagement": {
+          "title": "Local User Management",
+          "description": "Manage your employees on your own computer."
+        },
+        "deviceControl": {
+          "title": "Device Control",
+          "description": "See and control which devices are active."
+        },
+        "reports": {
+          "title": "Detailed Reports",
+          "description": "Access records, usage statistics and analytics."
+        },
+        "permissionDefinition": {
+          "title": "Permission Definition",
+          "description": "Determine which employee can pass through which door."
+        }
+      },
+      "onPremise": {
+        "title": "Why On-Premise?",
+        "subtitle": "Advantages of storing your data on your own computer",
+        "dataSecurity": {
+          "title": "Maximum Data Security",
+          "description": "Your data is stored on your own server. It doesn't go outside.",
+          "features": ["Local data storage", "No external access", "GDPR compliant"]
+        },
+        "fastAccess": {
+          "title": "Fast Access",
+          "description": "Since your data is local, you can process very quickly.",
+          "features": ["Instant data access", "Internet independent", "High performance"]
+        },
+        "fullControl": {
+          "title": "Full Control",
+          "description": "The system is completely under your control.",
+          "features": ["Independent management", "Customizable", "Update control"]
+        }
+      },
+      "managementFeatures": {
+        "title": "Management Features",
+        "subtitle": "What can you do in the company admin panel?",
+        "employeeManagement": {
+          "title": "Employee Management",
+          "features": ["Adding new employees", "Updating employee information", "Permission assignment"]
+        },
+        "deviceManagement": {
+          "title": "Device Management",
+          "features": ["Device status control", "Adding/removing devices", "Maintenance tracking"]
+        },
+        "reporting": {
+          "title": "Reporting",
+          "features": ["Access reports", "Usage statistics", "Excel export"]
+        },
+        "permissionManagement": {
+          "title": "Permission Management",
+          "features": ["Role definition", "Time-based permissions", "Emergency access"]
+        }
+      }
+    },
+    "mobileAppPage": {
+      "features": {
+        "title": "Mobile App Features",
+        "subtitle": "Features designed for users to make secure access",
+        "qrCodeReading": {
+          "title": "QR Code Reading",
+          "description": "Scan the QR code on the door with your phone. The system instantly recognizes you and checks your authorization."
+        },
+        "accessHistory": {
+          "title": "Access History",
+          "description": "View all your accesses. Track which door you passed through and when."
+        },
+        "notifications": {
+          "title": "Instant Notifications",
+          "description": "Get instant information about your access status. Successful accesses and warnings."
+        },
+        "userProfile": {
+          "title": "User Profile",
+          "description": "View and update your personal information. Check your permissions."
+        }
+      },
+      "howItWorks": {
+        "title": "How It Works?",
+        "subtitle": "Make secure access in 3 simple steps",
+        "step1": {
+          "title": "Scan QR Code",
+          "description": "Point your phone's camera at the QR code on the door. The app automatically reads the code."
+        },
+        "step2": {
+          "title": "Authorization Check",
+          "description": "The system verifies your identity and checks your authorization to pass through this door."
+        },
+        "step3": {
+          "title": "Door Opens",
+          "description": "If you have permission, the door opens instantly. The access is recorded and you are notified."
+        }
+      },
+      "benefits": {
+        "title": "Why Mobile App?",
+        "subtitle": "Advantages over traditional key and card systems",
+        "security": {
+          "title": "High Security",
+          "description": "Works with your phone's security features. Biometric authentication support.",
+          "features": {
+            "0": "Fingerprint and face recognition",
+            "1": "Encrypted communication",
+            "2": "Instant permission cancellation"
+          }
+        },
+        "speed": {
+          "title": "Fast Access",
+          "description": "QR code reading and door opening process is completed in seconds.",
+          "features": {
+            "0": "Instant QR code recognition",
+            "1": "Fast authorization check",
+            "2": "Instant door opening"
+          }
+        },
+        "easeOfUse": {
+          "title": "Ease of Use",
+          "description": "Everyone can use it easily with a simple interface. No technical knowledge required.",
+          "features": {
+            "0": "Intuitive design",
+            "1": "English interface",
+            "2": "Easy setup"
+          }
+        }
+      },
+      "download": {
+        "title": "OxyKeyPass Mobile App",
+        "subtitle": "Download for free for your iOS and Android devices",
+        "appStore": "Download from App Store",
+        "googlePlay": "Download from Google Play"
+      }
+    },
+    "generalApiPage": {
+      "features": {
+        "title": "General API Features",
+        "subtitle": "Central authentication and routing system",
+        "authentication": {
+          "title": "User Authentication",
+          "description": "Central authentication system for all users"
+        },
+        "routing": {
+          "title": "Company Routing",
+          "description": "Routes users to the correct company"
+        },
+        "security": {
+          "title": "Secure Communication",
+          "description": "Encrypted and secure data transfer"
+        },
+        "management": {
+          "title": "Central Management",
+          "description": "Central control of the entire system"
+        }
+      },
+      "architecture": {
+        "title": "Architecture",
+        "subtitle": "General API's role in the system",
+        "centralHub": {
+          "title": "Central Hub",
+          "description": "Acts as the heart of the entire system"
+        },
+        "userManagement": {
+          "title": "User Management",
+          "description": "Global user database management"
+        },
+        "companyRouting": {
+          "title": "Company Routing",
+          "description": "Routing system to the correct company"
+        }
+      },
+      "benefits": {
+        "title": "Why General API?",
+        "subtitle": "Advantages of the central system",
+        "centralized": {
+          "title": "Central Control",
+          "description": "Manage the entire system from a single point",
+          "features": {
+            "0": "Single entry point",
+            "1": "Central user management",
+            "2": "Global security policies"
+          }
+        },
+        "scalability": {
+          "title": "Scalability",
+          "description": "Adapts to your growing business",
+          "features": {
+            "0": "Unlimited users",
+            "1": "Multi-company support",
+            "2": "High performance"
+          }
+        },
+        "security": {
+          "title": "Security",
+          "description": "Highest security standards",
+          "features": {
+            "0": "Encrypted communication",
+            "1": "Secure authentication",
+            "2": "Data protection"
+          }
+        }
+      }
+    },
+    "companyApiPage": {
+      "features": {
+        "title": "Company API Features",
+        "subtitle": "Each company's own on-premise authorization system",
+        "localData": {
+          "title": "Local Data Storage",
+          "description": "Your data is stored on your own server"
+        },
+        "authorization": {
+          "title": "Authorization Control",
+          "description": "Local authorization decisions"
+        },
+        "websocket": {
+          "title": "WebSocket Triggering",
+          "description": "Instant command sending to devices"
+        },
+        "security": {
+          "title": "Secure Access",
+          "description": "Data protection with maximum security"
+        }
+      },
+      "onPremise": {
+        "title": "On-Premise Advantages",
+        "subtitle": "Benefits of running on your own server",
+        "dataControl": {
+          "title": "Data Control",
+          "description": "Your data is completely under your control",
+          "features": {
+            "0": "Local data storage",
+            "1": "No external access",
+            "2": "Full control"
+          }
+        },
+        "performance": {
+          "title": "High Performance",
+          "description": "Local systems are much faster",
+          "features": {
+            "0": "Instant access",
+            "1": "Low latency",
+            "2": "High speed"
+          }
+        },
+        "compliance": {
+          "title": "Compliance",
+          "description": "KVKK and GDPR compliant",
+          "features": {
+            "0": "Data privacy",
+            "1": "Legal compliance",
+            "2": "Security standards"
+          }
+        }
+      }
+    },
+    "deviceIntegrationPage": {
+      "features": {
+        "title": "Device Integration Features",
+        "subtitle": "Secure connection system with physical devices",
+        "raspberryPi": {
+          "title": "Raspberry Pi Support",
+          "description": "Small and powerful control unit"
+        },
+        "websocket": {
+          "title": "WebSocket Communication",
+          "description": "Instant device control"
+        },
+        "physicalControl": {
+          "title": "Physical Control",
+          "description": "Door, turnstile and lock control"
+        },
+        "security": {
+          "title": "Security Protocols",
+          "description": "Industry standard security"
+        }
+      },
+      "devices": {
+        "title": "Supported Devices",
+        "subtitle": "What devices does it work with?",
+        "turnstiles": {
+          "title": "Turnstiles",
+          "description": "Turnstile systems for access control",
+          "features": {
+            "0": "Electronic turnstile",
+            "1": "Mechanical turnstile",
+            "2": "Revolving door"
+          }
+        },
+        "doorLocks": {
+          "title": "Door Locks",
+          "description": "Electronic door lock system",
+          "features": {
+            "0": "Electronic lock",
+            "1": "Magnetic lock",
+            "2": "Automatic door"
+          }
+        },
+        "lockers": {
+          "title": "Locker Locks",
+          "description": "Locker lock control",
+          "features": {
+            "0": "Electronic locker lock",
+            "1": "Equipment locker",
+            "2": "Security locker"
+          }
+        }
+      },
+      "installation": {
+        "title": "Installation Process",
+        "subtitle": "Device integration in 3 steps",
+        "step1": {
+          "title": "Device Connection",
+          "description": "Connect Raspberry Pi to the device",
+          "features": {
+            "0": "Raspberry Pi 4 (recommended)",
+            "1": "WiFi connection",
+            "2": "GPIO pins",
+            "3": "Power adapter"
+          }
+        },
+        "step2": {
+          "title": "Software Installation",
+          "description": "Install the control software",
+          "features": {
+            "0": "Node.js runtime",
+            "1": "WebSocket support",
+            "2": "GPIO libraries",
+            "3": "Security protocols"
+          }
+        },
+        "step3": {
+          "title": "Test and Activation",
+          "description": "Test the system and activate it",
+          "features": {
+            "0": "Raspberry Pi setup",
+            "1": "Software installation",
+            "2": "Device connection",
+            "3": "Test and validation"
+          }
+        }
+      }
+    },
+    "workflowPage": {
+      "features": {
+        "title": "Coordination Process",
+        "subtitle": "The process of 5 components working together",
+        "qrReading": {
+          "title": "QR Code Reading",
+          "description": "QR code reading with mobile app"
+        },
+        "authentication": {
+          "title": "Authentication",
+          "description": "User verification in General API"
+        },
+        "authorization": {
+          "title": "Authorization Control",
+          "description": "Permission control in Company API"
+        },
+        "deviceControl": {
+          "title": "Device Opening",
+          "description": "Opening of physical device"
+        }
+      },
+      "process": {
+        "title": "Access Process",
+        "subtitle": "Step by step access flow",
+        "step1": {
+          "title": "QR Code Reading",
+          "description": "User reads QR code",
+          "features": {
+            "0": "QR code scanned",
+            "1": "Device information retrieved",
+            "2": "Sent to General API"
+          }
+        },
+        "step2": {
+          "title": "Authentication",
+          "description": "General API verifies user",
+          "features": {
+            "0": "User identity checked",
+            "1": "Company information determined",
+            "2": "Routed to Company API"
+          }
+        },
+        "step3": {
+          "title": "Company Routing",
+          "description": "Routing to correct company"
+        },
+        "step4": {
+          "title": "Permission Check",
+          "description": "Company API checks permission",
+          "features": {
+            "0": "Local data checked",
+            "1": "Permission status determined",
+            "2": "Command sent to device"
+          }
+        },
+        "step5": {
+          "title": "Device Opening",
+          "description": "Device opens via WebSocket"
+        }
+      },
+      "benefits": {
+        "title": "Coordination Benefits",
+        "subtitle": "Benefits of working together",
+        "efficiency": {
+          "title": "High Efficiency",
+          "description": "Fast and secure access",
+          "features": {
+            "0": "Instant processing",
+            "1": "Automatic control",
+            "2": "No errors"
+          }
+        },
+        "security": {
+          "title": "Security",
+          "description": "Multi-layered security",
+          "features": {
+            "0": "Authentication",
+            "1": "Permission control",
+            "2": "Secure communication"
+          }
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "24/7 uninterrupted operation",
+          "features": {
+            "0": "Redundant system",
+            "1": "Automatic reconnection",
+            "2": "Fault tolerance"
+          }
+        }
+      }
+    },
+    "viewDetails": "View Details"
   }
 }

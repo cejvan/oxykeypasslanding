@@ -4,9 +4,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactPage from "@/components/pages/ContactPage";
 import ProductPage from "@/components/pages/ProductPage";
-import { getTranslations } from "next-intl/server";
-import Hero from '@/components/Hero';
-import { getLocalizedPath } from '@/utils/routes';
+import SolutionsPage from "@/components/pages/SolutionsPage";
+import MobileAppPage from "@/components/pages/product/MobileAppPage";
+import GeneralApiPage from "@/components/pages/product/GeneralApiPage";
+import DeviceIntegrationPage from "@/components/pages/product/DeviceIntegrationPage";
+import AdminPanelsPage from "@/components/pages/product/AdminPanelsPage";
+import CompanyApiPage from "@/components/pages/product/CompanyApiPage";
+import WorkflowPage from "@/components/pages/product/WorkflowPage";
+import ModelsPage from "@/components/pages/ModelsPage";
+import IntegrationsPage from "@/components/pages/IntegrationsPage";
+import SecurityPage from "@/components/pages/SecurityPage";
+import PricingPage from "@/components/pages/PricingPage";
 
 const DEFAULT_LOCALE = "tr";
 
@@ -35,32 +43,111 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
     </div>
   );
 
-  // Generic simple page renderer for new tabs
-  const renderSimplePage = async (key: string) => {
-    const tNav = await getTranslations({ locale, namespace: "navigation" });
-    const title = tNav(key as string);
-    const breadcrumbs = [
-      { label: tNav('home'), href: getLocalizedPath('home', locale) },
-      { label: title }
-    ];
-    return (
-      <PageWrapper>
-        <Hero
-          title={title}
-          subtitle={'Coming soon.'}
-          align="left"
-          breadcrumbs={breadcrumbs}
-          backgroundImageUrl="https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=1920&q=80"
-        />
-      </PageWrapper>
-    );
-  };
 
   // /[locale]/product
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 1) {
     return (
       <PageWrapper>
         <ProductPage />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/mobile-app or /[locale]/urun/mobil-uygulama
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "mobile-app" || rest[1] === "mobil-uygulama")) {
+    return (
+      <PageWrapper>
+        <MobileAppPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/general-api or /[locale]/urun/genel-api
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "general-api" || rest[1] === "genel-api")) {
+    return (
+      <PageWrapper>
+        <GeneralApiPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/device-integration or /[locale]/urun/cihaz-entegrasyonu
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "device-integration" || rest[1] === "cihaz-entegrasyonu")) {
+    return (
+      <PageWrapper>
+        <DeviceIntegrationPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/admin-panels or /[locale]/urun/yonetim-paneli
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "admin-panels" || rest[1] === "yonetim-paneli")) {
+    return (
+      <PageWrapper>
+        <AdminPanelsPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/company-api or /[locale]/urun/firma-api
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "company-api" || rest[1] === "firma-api")) {
+    return (
+      <PageWrapper>
+        <CompanyApiPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/product/workflow or /[locale]/urun/koordinasyon
+  if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "workflow" || rest[1] === "koordinasyon")) {
+    return (
+      <PageWrapper>
+        <WorkflowPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/solutions
+  if (routeKey === "solutions" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <SolutionsPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/models
+  if (routeKey === "models" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <ModelsPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/integrations
+  if (routeKey === "integrations" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <IntegrationsPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/security
+  if (routeKey === "security" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <SecurityPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/pricing
+  if (routeKey === "pricing" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <PricingPage locale={locale} />
       </PageWrapper>
     );
   }
@@ -75,18 +162,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   }
 
   // Other navigation routes (coming soon pages)
-  if (
-    [
-      "solutions",
-      "models",
-      "integrations",
-      "security",
-      "pricing",
-      "resources",
-    ].includes(routeKey || "") && Array.isArray(rest) && rest.length === 1
-  ) {
-    return await renderSimplePage(routeKey!);
-  }
+  // No coming soon pages currently
 
   return notFound();
 }

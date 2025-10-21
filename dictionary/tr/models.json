@@ -1,0 +1,89 @@
+{
+  "models": {
+    "title": "Modeller",
+    "subtitle": "OxyKeyPass sisteminin tüm bileşenlerini keşfedin",
+    "overview": {
+      "title": "Sistem Modelleri",
+      "subtitle": "Her model farklı bir işlevi yerine getirir ve birlikte güçlü bir sistem oluşturur"
+    },
+    "mobileApp": {
+      "title": "Mobil Uygulama",
+      "description": "Kullanıcıların QR kodları okuyabileceği ve erişim sağlayabileceği iOS ve Android uygulaması",
+      "features": {
+        "0": "QR kod okuma",
+        "1": "Google/Apple hesap girişi",
+        "2": "E-posta ile kayıt",
+        "3": "Kolay kullanım arayüzü"
+      }
+    },
+    "generalApi": {
+      "title": "Genel API",
+      "description": "Merkezi kimlik doğrulama ve yönlendirme sistemi",
+      "features": {
+        "0": "Kullanıcı yönetimi",
+        "1": "Şirket yönetimi",
+        "2": "Cihaz yönetimi",
+        "3": "Merkezi kimlik sağlayıcı"
+      }
+    },
+    "companyApi": {
+      "title": "Firma API",
+      "description": "Her şirketin kendi on-premise veritabanını yönettiği lokal yetkilendirme sistemi",
+      "features": {
+        "0": "Lokal veri yönetimi",
+        "1": "Müşteri yetkilendirme",
+        "2": "Cihaz kontrolü",
+        "3": "WebSocket entegrasyonu"
+      }
+    },
+    "deviceIntegration": {
+      "title": "Cihaz Entegrasyonu",
+      "description": "Fiziksel cihazları kontrol eden Raspberry Pi tabanlı sistem",
+      "features": {
+        "0": "Raspberry Pi 4 desteği",
+        "1": "WiFi bağlantısı",
+        "2": "GPIO pinleri",
+        "3": "Güvenlik protokolleri"
+      }
+    },
+    "adminPanels": {
+      "title": "Yönetim Panelleri",
+      "description": "Sistem yönetimi ve kontrol için web arayüzleri",
+      "features": {
+        "0": "Genel yönetim paneli",
+        "1": "Şirket yönetim paneli",
+        "2": "Kullanıcı arama",
+        "3": "Erişim logları"
+      }
+    },
+    "architecture": {
+      "title": "Sistem Mimarisi",
+      "subtitle": "Tüm bileşenlerin nasıl birlikte çalıştığını görün",
+      "mobile": {
+        "title": "Mobil Uygulama",
+        "description": "Kullanıcı arayüzü ve QR kod okuma"
+      },
+      "api": {
+        "title": "Genel API",
+        "description": "Merkezi kimlik ve yönlendirme"
+      },
+      "company": {
+        "title": "Firma API",
+        "description": "Lokal yetkilendirme ve kontrol"
+      },
+      "device": {
+        "title": "Fiziksel Cihaz",
+        "description": "Turnike, kilit ve erişim noktaları"
+      }
+    },
+    "features": "Özellikler",
+    "learnMore": "Daha Fazla Bilgi",
+    "cta": {
+      "title": "Sisteminizi Oluşturun",
+      "subtitle": "İhtiyaçlarınıza göre özelleştirilmiş modüler çözüm",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "productDetails": "Ürün Detayları",
+      "requestDemo": "Demo Talep Et"
+    }
+  }
+}

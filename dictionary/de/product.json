@@ -48,11 +48,182 @@
         "description": "KVKK und GDPR konform"
       }
     },
+    "modules": {
+      "title": "Systemkomponenten",
+      "subtitle": "OxyKeyPass ist ein modulares System bestehend aus 5 Hauptkomponenten. Jede Komponente erfüllt eine andere Funktion und zusammen bieten sie sichere Zugangskontrolle.",
+      "mobileApp": {
+        "title": "Mobile App",
+        "description": "iOS und Android App für Benutzer zum Lesen von QR-Codes und Zugang. Jeder kann sie einfach mit einer einfachen Benutzeroberfläche verwenden.",
+        "features": ["QR-Code lesen", "Zugriffshistorie", "Benachrichtigungen", "Benutzerprofil"]
+      },
+      "adminPanels": {
+        "title": "Unternehmens-Verwaltungspanel",
+        "description": "Panel, in dem jedes Unternehmen seine eigene On-Premise-Datenbank verwaltet. Verwalten Sie Benutzer, Geräte und Berechtigungen auf Ihrem eigenen Computer.",
+        "features": ["Lokale Benutzerverwaltung", "Gerätekontrolle", "Berichte", "Berechtigungsdefinition"]
+      },
+      "deviceIntegration": {
+        "title": "Geräteintegration",
+        "description": "Integration mit physischen Geräten wie Drehkreuzen, Türschlössern, Schließfachschlössern. Gesteuert mit Raspberry Pi.",
+        "features": ["Raspberry Pi Support", "WebSocket-Kommunikation", "Physische Kontrolle", "Sicherheitsprotokolle"]
+      },
+      "generalApi": {
+        "title": "Allgemeine API",
+        "description": "Zentrales Authentifizierungssystem. Erkennt Benutzer und leitet sie zum richtigen Unternehmen weiter. Das Herz des gesamten Systems.",
+        "features": ["Benutzerauthentifizierung", "Unternehmensrouting", "Sichere Kommunikation", "Zentrale Verwaltung"]
+      },
+      "companyApi": {
+        "title": "Unternehmens-API",
+        "description": "Autorisierungssystem, das auf dem eigenen Computer jedes Unternehmens läuft. Daten werden lokal gespeichert, Sicherheit ist maximal.",
+        "features": ["Lokale Datenspeicherung", "Autorisierungskontrolle", "WebSocket-Triggering", "Sicherer Zugriff"]
+      },
+      "workflow": {
+        "title": "Koordination",
+        "description": "Der Prozess von 5 Komponenten, die zusammenarbeiten. QR-Code lesen, Authentifizierung, Autorisierung und Gerätekontrolle.",
+        "features": ["QR-Code lesen", "Authentifizierung", "Autorisierungskontrolle", "Geräteöffnung"]
+      }
+    },
     "cta": {
       "title": "Bereit zu Starten?",
       "subtitle": "Entdecken Sie die Kraft von OxyKeyPass mit 14-tägiger kostenloser Testversion",
       "startFreeTrial": "Kostenlose Testversion Starten",
       "requestDemo": "Demo Anfordern"
-    }
+    },
+    "adminPanelsPage": {
+      "features": {
+        "title": "Unternehmens-Verwaltungspanel Funktionen",
+        "subtitle": "Sicheres Panel, in dem jedes Unternehmen seine eigenen Daten verwaltet",
+        "localUserManagement": {
+          "title": "Lokale Benutzerverwaltung",
+          "description": "Verwalten Sie Ihre Mitarbeiter auf Ihrem eigenen Computer."
+        },
+        "deviceControl": {
+          "title": "Gerätekontrolle",
+          "description": "Sehen und kontrollieren Sie, welche Geräte aktiv sind."
+        },
+        "reports": {
+          "title": "Detaillierte Berichte",
+          "description": "Zugriffsaufzeichnungen, Nutzungsstatistiken und Analysen."
+        },
+        "permissionDefinition": {
+          "title": "Berechtigungsdefinition",
+          "description": "Bestimmen Sie, welcher Mitarbeiter durch welche Tür gehen kann."
+        }
+      },
+      "onPremise": {
+        "title": "Warum On-Premise?",
+        "subtitle": "Vorteile der Speicherung Ihrer Daten auf Ihrem eigenen Computer",
+        "dataSecurity": {
+          "title": "Maximale Datensicherheit",
+          "description": "Ihre Daten werden auf Ihrem eigenen Server gespeichert. Sie gehen nicht nach außen.",
+          "features": ["Lokale Datenspeicherung", "Kein externer Zugriff", "DSGVO-konform"]
+        },
+        "fastAccess": {
+          "title": "Schneller Zugriff",
+          "description": "Da Ihre Daten lokal sind, können Sie sehr schnell verarbeiten.",
+          "features": ["Sofortiger Datenzugriff", "Internet-unabhängig", "Hohe Leistung"]
+        },
+        "fullControl": {
+          "title": "Vollständige Kontrolle",
+          "description": "Das System steht vollständig unter Ihrer Kontrolle.",
+          "features": ["Unabhängige Verwaltung", "Anpassbar", "Update-Kontrolle"]
+        }
+      },
+      "managementFeatures": {
+        "title": "Verwaltungsfunktionen",
+        "subtitle": "Was können Sie im Unternehmens-Verwaltungspanel tun?",
+        "employeeManagement": {
+          "title": "Mitarbeiterverwaltung",
+          "features": ["Neue Mitarbeiter hinzufügen", "Mitarbeiterinformationen aktualisieren", "Berechtigungszuweisung"]
+        },
+        "deviceManagement": {
+          "title": "Geräteverwaltung",
+          "features": ["Gerätestatus-Kontrolle", "Geräte hinzufügen/entfernen", "Wartungsverfolgung"]
+        },
+        "reporting": {
+          "title": "Berichterstattung",
+          "features": ["Zugriffsberichte", "Nutzungsstatistiken", "Excel-Export"]
+        },
+        "permissionManagement": {
+          "title": "Berechtigungsverwaltung",
+          "features": ["Rollendefinition", "Zeitbasierte Berechtigungen", "Notfallzugriff"]
+        }
+      }
+    },
+    "mobileAppPage": {
+      "features": {
+        "title": "Mobile App Funktionen",
+        "subtitle": "Funktionen, die für Benutzer zur sicheren Zugangskontrolle entwickelt wurden",
+        "qrCodeReading": {
+          "title": "QR-Code Lesen",
+          "description": "Scannen Sie den QR-Code an der Tür mit Ihrem Telefon. Das System erkennt Sie sofort und überprüft Ihre Berechtigung."
+        },
+        "accessHistory": {
+          "title": "Zugriffshistorie",
+          "description": "Sehen Sie alle Ihre Zugriffe. Verfolgen Sie, durch welche Tür Sie gegangen sind und wann."
+        },
+        "notifications": {
+          "title": "Sofortige Benachrichtigungen",
+          "description": "Erhalten Sie sofortige Informationen über Ihren Zugriffsstatus. Erfolgreiche Zugriffe und Warnungen."
+        },
+        "userProfile": {
+          "title": "Benutzerprofil",
+          "description": "Sehen und aktualisieren Sie Ihre persönlichen Informationen. Überprüfen Sie Ihre Berechtigungen."
+        }
+      },
+      "howItWorks": {
+        "title": "Wie funktioniert es?",
+        "subtitle": "Sicheren Zugang in 3 einfachen Schritten",
+        "step1": {
+          "title": "QR-Code Scannen",
+          "description": "Richten Sie die Kamera Ihres Telefons auf den QR-Code an der Tür. Die App liest den Code automatisch."
+        },
+        "step2": {
+          "title": "Berechtigungsprüfung",
+          "description": "Das System verifiziert Ihre Identität und überprüft Ihre Berechtigung, durch diese Tür zu gehen."
+        },
+        "step3": {
+          "title": "Tür öffnet sich",
+          "description": "Wenn Sie die Berechtigung haben, öffnet sich die Tür sofort. Der Zugriff wird aufgezeichnet und Sie werden benachrichtigt."
+        }
+      },
+      "benefits": {
+        "title": "Warum Mobile App?",
+        "subtitle": "Vorteile gegenüber traditionellen Schlüssel- und Kartensystemen",
+        "security": {
+          "title": "Hohe Sicherheit",
+          "description": "Funktioniert mit den Sicherheitsfunktionen Ihres Telefons. Biometrische Authentifizierungsunterstützung.",
+          "features": {
+            "0": "Fingerabdruck- und Gesichtserkennung",
+            "1": "Verschlüsselte Kommunikation",
+            "2": "Sofortige Berechtigungsaufhebung"
+          }
+        },
+        "speed": {
+          "title": "Schneller Zugriff",
+          "description": "QR-Code-Lesung und Türöffnung werden in Sekunden abgeschlossen.",
+          "features": {
+            "0": "Sofortige QR-Code-Erkennung",
+            "1": "Schnelle Berechtigungsprüfung",
+            "2": "Sofortige Türöffnung"
+          }
+        },
+        "easeOfUse": {
+          "title": "Benutzerfreundlichkeit",
+          "description": "Jeder kann es einfach mit einer einfachen Benutzeroberfläche verwenden. Keine technischen Kenntnisse erforderlich.",
+          "features": {
+            "0": "Intuitive Gestaltung",
+            "1": "Deutsche Benutzeroberfläche",
+            "2": "Einfache Einrichtung"
+          }
+        }
+      },
+      "download": {
+        "title": "OxyKeyPass Mobile App",
+        "subtitle": "Kostenlos herunterladen für Ihre iOS- und Android-Geräte",
+        "appStore": "Aus dem App Store herunterladen",
+        "googlePlay": "Von Google Play herunterladen"
+      }
+    },
+    "viewDetails": "Details Anzeigen"
   }
 }

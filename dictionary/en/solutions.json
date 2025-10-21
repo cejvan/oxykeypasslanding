@@ -1,0 +1,142 @@
+{
+  "solutions": {
+    "title": "Industry Solutions",
+    "subtitle": "Digital access control solutions designed specifically for each industry's needs",
+    "sectorsTitle": "Which Industries Use It?",
+    "sectorsSubtitle": "OxyKeyPass offers flexible and customizable solutions to meet the special needs of different industries",
+    "sectors": {
+      "banking": {
+        "title": "Banking",
+        "description": "Digital access control for bank branches, ATM areas and secure offices",
+        "features": [
+          "ATM area access control",
+          "Secure office access",
+          "Customer service areas",
+          "Vault and safe access",
+          "Employee authentication"
+        ],
+        "benefits": [
+          "High security standards",
+          "GDPR compliant data management",
+          "Centralized access control",
+          "Detailed access logs"
+        ]
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Secure access system for hospitals, clinics and health centers",
+        "features": [
+          "Patient room access",
+          "Operating room control",
+          "Pharmacy access",
+          "Staff areas",
+          "Emergency service control"
+        ],
+        "benefits": [
+          "Patient privacy protection",
+          "Hygiene standards",
+          "Emergency access",
+          "Staff authorization"
+        ]
+      },
+      "fitness": {
+        "title": "Sports & Fitness",
+        "description": "Membership management for gyms, fitness centers and sports facilities",
+        "features": [
+          "Member entry-exit tracking",
+          "Sports area access",
+          "Locker system",
+          "Staff areas",
+          "Private training rooms"
+        ],
+        "benefits": [
+          "24/7 access capability",
+          "Membership management",
+          "Usage statistics",
+          "Secure equipment access"
+        ]
+      },
+      "corporate": {
+        "title": "Corporate Offices",
+        "description": "Access control for large companies, office buildings and corporate centers",
+        "features": [
+          "Floor-based access control",
+          "Meeting room reservations",
+          "Employee entry-exit tracking",
+          "Guest management",
+          "Parking area control"
+        ],
+        "benefits": [
+          "Centralized management",
+          "Flexible authorization",
+          "Reporting system",
+          "Integrated employee system"
+        ]
+      },
+      "education": {
+        "title": "Educational Institutions",
+        "description": "Secure access system for schools, universities and training centers",
+        "features": [
+          "Classroom access control",
+          "Laboratory security",
+          "Library access",
+          "Teacher rooms",
+          "Gymnasium control"
+        ],
+        "benefits": [
+          "Student safety",
+          "Educational material protection",
+          "Time-based access",
+          "Parent tracking system"
+        ]
+      },
+      "manufacturing": {
+        "title": "Manufacturing / Industry",
+        "description": "Security system for factories, production facilities and industrial areas",
+        "features": [
+          "Production line access",
+          "Machine room control",
+          "Warehouse security",
+          "Employee shift tracking",
+          "Quality control areas"
+        ],
+        "benefits": [
+          "Workplace safety ensured",
+          "Machine protection",
+          "Shift management",
+          "Quality control"
+        ]
+      }
+    },
+    "whyOxyKeyPass": {
+      "title": "Why OxyKeyPass?",
+      "subtitle": "Reliable and effective solutions across all industries",
+      "security": {
+        "title": "High Security",
+        "description": "Your data is protected with banking-level security standards."
+      },
+      "speed": {
+        "title": "Quick Setup",
+        "description": "Activate your system within 24 hours and start using it."
+      },
+      "reporting": {
+        "title": "Detailed Reporting",
+        "description": "Optimize your business with usage statistics and access reports."
+      },
+      "mobile": {
+        "title": "Mobile Solution",
+        "description": "Access from anywhere with iOS and Android applications."
+      }
+    },
+    "cta": {
+      "title": "Industry-Specific Solution",
+      "subtitle": "Customized access control system according to your business needs",
+      "freeConsultation": "Free Consultation",
+      "productDetails": "Product Details",
+      "requestDemo": "Request Demo"
+    },
+    "features": "Features",
+    "benefits": "Benefits",
+    "getDetails": "Get Details"
+  }
+}

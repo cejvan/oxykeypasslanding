@@ -1,0 +1,65 @@
+{
+  "security": {
+    "title": "Güvenlik & Uyum",
+    "subtitle": "OxyKeyPass'in güvenlik standartları ve uyumluluk sertifikaları",
+    "features": {
+      "title": "Güvenlik Özellikleri",
+      "subtitle": "Bankacılık seviyesinde güvenlik standartları"
+    },
+    "encryption": {
+      "title": "Veri Şifreleme",
+      "description": "Tüm veriler end-to-end şifreleme ile korunur"
+    },
+    "authentication": {
+      "title": "Kimlik Doğrulama",
+      "description": "Çok faktörlü kimlik doğrulama sistemi"
+    },
+    "dataProtection": {
+      "title": "Veri Koruması",
+      "description": "KVKK ve GDPR uyumlu veri koruma"
+    },
+    "auditLogs": {
+      "title": "Denetim Logları",
+      "description": "Tüm erişim işlemleri detaylı olarak kaydedilir"
+    },
+    "compliance": {
+      "title": "Uyumluluk Sertifikaları",
+      "subtitle": "Uluslararası güvenlik standartlarına uygunluk",
+      "gdpr": {
+        "title": "GDPR Uyumlu",
+        "description": "Avrupa Birliği veri koruma yönetmeliğine tam uyum"
+      },
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Bilgi güvenliği yönetim sistemi standardı"
+      },
+      "sox": {
+        "title": "SOX Uyumlu",
+        "description": "Sarbanes-Oxley yasasına uygunluk"
+      }
+    },
+    "standards": {
+      "title": "Güvenlik Standartları",
+      "subtitle": "Endüstri standartlarında güvenlik önlemleri",
+      "encryption": {
+        "title": "Veri Şifreleme",
+        "description": "AES-256 şifreleme standardı"
+      },
+      "accessControl": {
+        "title": "Erişim Kontrolü",
+        "description": "Role-based access control (RBAC)"
+      },
+      "monitoring": {
+        "title": "7/24 İzleme",
+        "description": "Sürekli güvenlik izleme ve tehdit tespiti"
+      }
+    },
+    "cta": {
+      "title": "Güvenli Sisteminizi Kurun",
+      "subtitle": "En yüksek güvenlik standartlarıyla korunan sistem",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "productDetails": "Ürün Detayları",
+      "requestDemo": "Demo Talep Et"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "integrations": {
+    "title": "Integrations",
+    "subtitle": "Discover devices and systems that can be integrated with OxyKeyPass",
+    "overview": {
+      "title": "Supported Integrations",
+      "subtitle": "Solutions compatible with various physical devices and systems"
+    },
+    "turnstiles": {
+      "title": "Turnstiles",
+      "description": "Access control for electronic and mechanical turnstile systems",
+      "features": {
+        "0": "Electronic turnstile",
+        "1": "Mechanical turnstile",
+        "2": "Revolving door"
+      }
+    },
+    "doorLocks": {
+      "title": "Door Locks",
+      "description": "Secure access for electronic door lock systems",
+      "features": {
+        "0": "Electronic lock",
+        "1": "Magnetic lock",
+        "2": "Automatic door"
+      }
+    },
+    "lockers": {
+      "title": "Locker Locks",
+      "description": "Access control for locker systems",
+      "features": {
+        "0": "Electronic locker lock",
+        "1": "Equipment locker",
+        "2": "Security locker"
+      }
+    },
+    "raspberryPi": {
+      "title": "Raspberry Pi",
+      "description": "Microcontroller system for device control",
+      "features": {
+        "0": "Raspberry Pi 4 support",
+        "1": "Node.js runtime",
+        "2": "WebSocket connection"
+      }
+    },
+    "installation": {
+      "title": "Installation Process",
+      "subtitle": "Device integration completed in 3 steps",
+      "step1": {
+        "title": "Device Connection",
+        "description": "Connect Raspberry Pi and physical devices"
+      },
+      "step2": {
+        "title": "Software Installation",
+        "description": "Install Node.js and required libraries"
+      },
+      "step3": {
+        "title": "Test and Activation",
+        "description": "Test the system and activate it"
+      }
+    },
+    "features": "Features",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Integration Support",
+      "subtitle": "Integrate your devices with OxyKeyPass",
+      "freeConsultation": "Free Consultation",
+      "productDetails": "Product Details",
+      "requestDemo": "Request Demo"
+    }
+  }
+}

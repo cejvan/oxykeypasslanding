@@ -1,0 +1,142 @@
+{
+  "solutions": {
+    "title": "Sektörel Çözümler",
+    "subtitle": "Her sektörün ihtiyaçlarına özel olarak tasarlanmış dijital erişim kontrolü çözümleri",
+    "sectorsTitle": "Hangi Sektörlerde Kullanılır?",
+    "sectorsSubtitle": "OxyKeyPass, farklı sektörlerin özel ihtiyaçlarını karşılamak için esnek ve özelleştirilebilir çözümler sunar",
+    "sectors": {
+      "banking": {
+        "title": "Bankacılık",
+        "description": "Banka şubeleri, ATM alanları ve güvenli ofisler için dijital erişim kontrolü",
+        "features": [
+          "ATM alanı erişim kontrolü",
+          "Güvenli ofis erişimi",
+          "Müşteri hizmet alanları",
+          "Vault ve kasa erişimi",
+          "Çalışan kimlik doğrulama"
+        ],
+        "benefits": [
+          "Yüksek güvenlik standartları",
+          "KVKK uyumlu veri yönetimi",
+          "Merkezi erişim kontrolü",
+          "Detaylı erişim logları"
+        ]
+      },
+      "healthcare": {
+        "title": "Sağlık Sektörü",
+        "description": "Hastaneler, klinikler ve sağlık merkezleri için güvenli erişim sistemi",
+        "features": [
+          "Hasta odası erişimi",
+          "Ameliyathane kontrolü",
+          "İlaç deposu erişimi",
+          "Personel alanları",
+          "Acil servis kontrolü"
+        ],
+        "benefits": [
+          "Hasta gizliliği korunur",
+          "Hijyen standartları",
+          "Acil durum erişimi",
+          "Personel yetkilendirme"
+        ]
+      },
+      "fitness": {
+        "title": "Spor ve Fitness",
+        "description": "Spor salonları, fitness merkezleri ve spor tesisleri için üyelik yönetimi",
+        "features": [
+          "Üye giriş-çıkış takibi",
+          "Spor alanı erişimi",
+          "Kilitli dolap sistemi",
+          "Personel alanları",
+          "Özel ders odaları"
+        ],
+        "benefits": [
+          "24/7 erişim imkanı",
+          "Üyelik yönetimi",
+          "Kullanım istatistikleri",
+          "Güvenli ekipman erişimi"
+        ]
+      },
+      "corporate": {
+        "title": "Kurumsal Ofisler",
+        "description": "Büyük şirketler, ofis binaları ve kurumsal merkezler için erişim kontrolü",
+        "features": [
+          "Kat bazlı erişim kontrolü",
+          "Toplantı odası rezervasyonu",
+          "Çalışan giriş-çıkış takibi",
+          "Misafir yönetimi",
+          "Park alanı kontrolü"
+        ],
+        "benefits": [
+          "Merkezi yönetim",
+          "Esnek yetkilendirme",
+          "Raporlama sistemi",
+          "Entegre çalışan sistemi"
+        ]
+      },
+      "education": {
+        "title": "Eğitim Kurumları",
+        "description": "Okullar, üniversiteler ve eğitim merkezleri için güvenli erişim sistemi",
+        "features": [
+          "Sınıf erişim kontrolü",
+          "Laboratuvar güvenliği",
+          "Kütüphane erişimi",
+          "Öğretmen odaları",
+          "Spor salonu kontrolü"
+        ],
+        "benefits": [
+          "Öğrenci güvenliği",
+          "Eğitim materyali korun사ı",
+          "Zaman bazlı erişim",
+          "Veli takip sistemi"
+        ]
+      },
+      "manufacturing": {
+        "title": "Üretim / Endüstri",
+        "description": "Fabrikalar, üretim tesisleri ve endüstriyel alanlar için güvenlik sistemi",
+        "features": [
+          "Üretim hattı erişimi",
+          "Makine odası kontrolü",
+          "Depo güvenliği",
+          "Çalışan vardiya takibi",
+          "Kalite kontrol alanları"
+        ],
+        "benefits": [
+          "İş güvenliği sağlanır",
+          "Makine korunması",
+          "Vardiya yönetimi",
+          "Kalite kontrolü"
+        ]
+      }
+    },
+    "whyOxyKeyPass": {
+      "title": "Neden OxyKeyPass?",
+      "subtitle": "Tüm sektörlerde güvenilir ve etkili çözümler",
+      "security": {
+        "title": "Yüksek Güvenlik",
+        "description": "Bankacılık seviyesinde güvenlik standartları ile verileriniz korunur."
+      },
+      "speed": {
+        "title": "Hızlı Kurulum",
+        "description": "24 saat içinde sisteminizi aktif hale getirin ve kullanmaya başlayın."
+      },
+      "reporting": {
+        "title": "Detaylı Raporlama",
+        "description": "Kullanım istatistikleri ve erişim raporları ile işletmenizi optimize edin."
+      },
+      "mobile": {
+        "title": "Mobil Çözüm",
+        "description": "iOS ve Android uygulamaları ile her yerden erişim sağlayın."
+      }
+    },
+    "cta": {
+      "title": "Sektörünüze Özel Çözüm",
+      "subtitle": "İşletmenizin ihtiyaçlarına göre özelleştirilmiş erişim kontrolü sistemi",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "productDetails": "Ürün Detayları",
+      "requestDemo": "Demo Talep Et"
+    },
+    "features": "Özellikler",
+    "benefits": "Avantajlar",
+    "getDetails": "Detaylı Bilgi Al"
+  }
+}

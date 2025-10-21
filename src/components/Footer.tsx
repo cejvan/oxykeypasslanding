@@ -17,7 +17,6 @@ const Footer = () => {
         { key: 'integrations', href: getLocalizedPath('integrations', locale) },
         { key: 'security', href: getLocalizedPath('security', locale) },
         { key: 'pricing', href: getLocalizedPath('pricing', locale) },
-        { key: 'resources', href: getLocalizedPath('resources', locale) },
         { key: 'contact', href: getLocalizedPath('contact', locale) },
     ];
 

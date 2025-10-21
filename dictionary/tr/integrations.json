@@ -1,0 +1,71 @@
+{
+  "integrations": {
+    "title": "Entegrasyonlar",
+    "subtitle": "OxyKeyPass ile entegre edilebilen cihaz ve sistemleri keşfedin",
+    "overview": {
+      "title": "Desteklenen Entegrasyonlar",
+      "subtitle": "Çeşitli fiziksel cihazlar ve sistemlerle uyumlu çözümler"
+    },
+    "turnstiles": {
+      "title": "Turnikeler",
+      "description": "Elektronik ve mekanik turnike sistemleri için erişim kontrolü",
+      "features": {
+        "0": "Elektronik turnike",
+        "1": "Mekanik turnike",
+        "2": "Döner kapı"
+      }
+    },
+    "doorLocks": {
+      "title": "Kapı Kilitleri",
+      "description": "Elektronik kapı kilidi sistemleri için güvenli erişim",
+      "features": {
+        "0": "Elektronik kilit",
+        "1": "Manyetik kilit",
+        "2": "Otomatik kapı"
+      }
+    },
+    "lockers": {
+      "title": "Dolap Kilitleri",
+      "description": "Kilitli dolap sistemleri için erişim kontrolü",
+      "features": {
+        "0": "Elektronik dolap kilit",
+        "1": "Ekipman dolabı",
+        "2": "Güvenlik dolabı"
+      }
+    },
+    "raspberryPi": {
+      "title": "Raspberry Pi",
+      "description": "Cihaz kontrolü için mikrodenetleyici sistemi",
+      "features": {
+        "0": "Raspberry Pi 4 desteği",
+        "1": "Node.js runtime",
+        "2": "WebSocket bağlantısı"
+      }
+    },
+    "installation": {
+      "title": "Kurulum Süreci",
+      "subtitle": "Cihaz entegrasyonu 3 adımda tamamlanır",
+      "step1": {
+        "title": "Cihaz Bağlantısı",
+        "description": "Raspberry Pi ve fiziksel cihazları bağlayın"
+      },
+      "step2": {
+        "title": "Yazılım Kurulumu",
+        "description": "Node.js ve gerekli kütüphaneleri yükleyin"
+      },
+      "step3": {
+        "title": "Test ve Aktivasyon",
+        "description": "Sistemi test edin ve aktif hale getirin"
+      }
+    },
+    "features": "Özellikler",
+    "learnMore": "Daha Fazla Bilgi",
+    "cta": {
+      "title": "Entegrasyon Desteği",
+      "subtitle": "Cihazlarınızı OxyKeyPass ile entegre edin",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "productDetails": "Ürün Detayları",
+      "requestDemo": "Demo Talep Et"
+    }
+  }
+}

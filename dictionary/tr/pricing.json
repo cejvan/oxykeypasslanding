@@ -1,0 +1,81 @@
+{
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "subtitle": "İhtiyaçlarınıza uygun plan seçin ve hemen başlayın",
+    "plansTitle": "Fiyatlandırma Planları",
+    "plansSubtitle": "Her işletme büyüklüğü için özel olarak tasarlanmış planlar",
+    "popular": "Popüler",
+    "plans": {
+      "starter": {
+        "name": "Başlangıç",
+        "price": "₺299",
+        "period": "/ay",
+        "description": "Küçük işletmeler için ideal başlangıç planı",
+        "features": {
+          "0": "50 kullanıcıya kadar",
+          "1": "5 cihaza kadar",
+          "2": "Temel raporlama",
+          "3": "E-posta desteği",
+          "4": "Mobil uygulama"
+        }
+      },
+      "professional": {
+        "name": "Profesyonel",
+        "price": "₺799",
+        "period": "/ay",
+        "description": "Büyüyen işletmeler için kapsamlı çözüm",
+        "features": {
+          "0": "500 kullanıcıya kadar",
+          "1": "50 cihaza kadar",
+          "2": "Gelişmiş raporlama",
+          "3": "Telefon desteği",
+          "4": "API erişimi",
+          "5": "Özel entegrasyonlar"
+        }
+      },
+      "enterprise": {
+        "name": "Kurumsal",
+        "price": "Özel Fiyat",
+        "period": "",
+        "description": "Büyük kuruluşlar için özel çözüm",
+        "features": {
+          "0": "Sınırsız kullanıcı",
+          "1": "Sınırsız cihaz",
+          "2": "Özel raporlama",
+          "3": "7/24 öncelikli destek",
+          "4": "On-premise kurulum",
+          "5": "Özel geliştirme",
+          "6": "SLA garantisi"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Plan Karşılaştırması",
+      "subtitle": "Hangi planın size uygun olduğunu keşfedin",
+      "users": {
+        "title": "Kullanıcı Sayısı",
+        "description": "İhtiyacınıza göre ölçeklenebilir kullanıcı limitleri"
+      },
+      "devices": {
+        "title": "Cihaz Desteği",
+        "description": "Turnike, kilit ve diğer cihazlarla uyumluluk"
+      },
+      "support": {
+        "title": "Destek Seviyesi",
+        "description": "E-posta, telefon ve 7/24 destek seçenekleri"
+      },
+      "setup": {
+        "title": "Kurulum Süresi",
+        "description": "24 saat içinde sisteminizi aktif hale getirin"
+      }
+    },
+    "getStarted": "Hemen Başla",
+    "cta": {
+      "title": "Sizin İçin Doğru Plan",
+      "subtitle": "İhtiyaçlarınıza uygun planı seçin ve hemen başlayın",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "productDetails": "Ürün Detayları",
+      "requestDemo": "Demo Talep Et"
+    }
+  }
+}

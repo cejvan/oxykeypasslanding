@@ -1,0 +1,81 @@
+{
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the plan that suits your needs and get started immediately",
+    "plansTitle": "Pricing Plans",
+    "plansSubtitle": "Plans specially designed for every business size",
+    "popular": "Popular",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "$29",
+        "period": "/month",
+        "description": "Ideal starter plan for small businesses",
+        "features": {
+          "0": "Up to 50 users",
+          "1": "Up to 5 devices",
+          "2": "Basic reporting",
+          "3": "Email support",
+          "4": "Mobile app"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "$79",
+        "period": "/month",
+        "description": "Comprehensive solution for growing businesses",
+        "features": {
+          "0": "Up to 500 users",
+          "1": "Up to 50 devices",
+          "2": "Advanced reporting",
+          "3": "Phone support",
+          "4": "API access",
+          "5": "Custom integrations"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom Price",
+        "period": "",
+        "description": "Custom solution for large organizations",
+        "features": {
+          "0": "Unlimited users",
+          "1": "Unlimited devices",
+          "2": "Custom reporting",
+          "3": "24/7 priority support",
+          "4": "On-premise installation",
+          "5": "Custom development",
+          "6": "SLA guarantee"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Plan Comparison",
+      "subtitle": "Discover which plan is right for you",
+      "users": {
+        "title": "Number of Users",
+        "description": "Scalable user limits according to your needs"
+      },
+      "devices": {
+        "title": "Device Support",
+        "description": "Compatibility with turnstiles, locks and other devices"
+      },
+      "support": {
+        "title": "Support Level",
+        "description": "Email, phone and 24/7 support options"
+      },
+      "setup": {
+        "title": "Setup Time",
+        "description": "Activate your system within 24 hours"
+      }
+    },
+    "getStarted": "Get Started",
+    "cta": {
+      "title": "The Right Plan for You",
+      "subtitle": "Choose the plan that suits your needs and get started immediately",
+      "freeConsultation": "Free Consultation",
+      "productDetails": "Product Details",
+      "requestDemo": "Request Demo"
+    }
+  }
+}
