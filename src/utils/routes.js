@@ -98,6 +98,14 @@ export const ROUTES = {
         es: "producto/flujo-trabajo",
         fr: "produit/flux-travail",
         de: "produkt/arbeitsablauf"
+    },
+    // Solutions subpages
+    "solutions/site-management": {
+        tr: "cozumler/site-yonetimi",
+        en: "solutions/site-management",
+        es: "soluciones/gestion-sitios",
+        fr: "solutions/gestion-sites",
+        de: "loesungen/standort-verwaltung"
     }
     // ...diğer rotalar buraya
 };

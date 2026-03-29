@@ -164,10 +164,10 @@ const SolutionsPage = ({ locale }: SolutionsPageProps) => {
                                 </div>
 
                                 {/* Right — CTA */}
-                                <div className="flex flex-col gap-3 lg:items-end shrink-0">
+                                <div className="flex flex-col gap-3 shrink-0 lg:w-52">
                                     <a href={panel.href}
                                         target="_blank" rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold font-body rounded-xl glow-gold-sm transition-all duration-200"
+                                        className="flex items-center justify-center gap-2 w-full py-3.5 font-semibold font-body rounded-xl glow-gold-sm transition-all duration-200"
                                         style={{ backgroundColor: '#C8913A', color: '#07090F' }}
                                         onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#A8751F')}
                                         onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C8913A')}
@@ -175,14 +175,14 @@ const SolutionsPage = ({ locale }: SolutionsPageProps) => {
                                         {locale === 'tr' ? 'Panele Git' : 'Go to Panel'}
                                         <ExternalLink className="w-4 h-4" />
                                     </a>
-                                    <a href={getLocalizedPath('contact', locale)}
-                                        className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold font-body rounded-xl text-[#F0EDE8] hover:bg-[rgba(200,145,58,0.06)] transition-all duration-200"
-                                        style={{ border: '1px solid rgba(200,145,58,0.25)' }}
+                                    <a href={locale === 'tr' ? '/cozumler/site-yonetimi' : '/solutions/site-management'}
+                                        className="flex items-center justify-center gap-2 w-full py-3.5 font-semibold font-body rounded-xl text-[#C8913A] hover:bg-[rgba(200,145,58,0.06)] transition-all duration-200"
+                                        style={{ border: '1px solid rgba(200,145,58,0.15)' }}
                                     >
-                                        {locale === 'tr' ? 'Demo Talep Et' : 'Request Demo'}
-                                        <ChevronRight className="w-4 h-4 text-[#C8913A]" />
+                                        {locale === 'tr' ? 'Detaylı İncele' : 'Learn More'}
+                                        <ChevronRight className="w-4 h-4" />
                                     </a>
-                                    <span className="text-[#3A4555] text-xs font-mono">
+                                    <span className="text-[#3A4555] text-xs font-mono text-center">
                                         {panel.href.replace('https://', '')}
                                     </span>
                                 </div>

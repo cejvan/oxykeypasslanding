@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ContactPage from "@/components/pages/ContactPage";
 import ProductPage from "@/components/pages/ProductPage";
 import SolutionsPage from "@/components/pages/SolutionsPage";
+import SiteManagementPage from "@/components/pages/solutions/SiteManagementPage";
 import MobileAppPage from "@/components/pages/product/MobileAppPage";
 import GeneralApiPage from "@/components/pages/product/GeneralApiPage";
 import DeviceIntegrationPage from "@/components/pages/product/DeviceIntegrationPage";
@@ -112,6 +113,15 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
     return (
       <PageWrapper>
         <SolutionsPage locale={locale} />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/solutions/site-management or /[locale]/cozumler/site-yonetimi
+  if (routeKey === "solutions" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "site-management" || rest[1] === "site-yonetimi")) {
+    return (
+      <PageWrapper>
+        <SiteManagementPage locale={locale} />
       </PageWrapper>
     );
   }
