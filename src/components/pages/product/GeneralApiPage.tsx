@@ -1,299 +1,178 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
+'use client';
+
+import { useLocale } from 'next-intl';
 import { getLocalizedPath } from '@/utils/routes';
-import Hero from '@/components/Hero';
-import { 
-  Zap, 
-  Shield, 
-  Users, 
-  Building, 
-  CheckCircle, 
-  ArrowRight,
-  Server,
-  Lock,
-  Globe,
-  Database
-} from 'lucide-react';
+import { Code2, Users, Building2, Lock, Server, ArrowRight, ChevronRight } from 'lucide-react';
 
-interface GeneralApiPageProps {
-  locale: string;
-}
+const FEATURES = [
+    {
+        icon: Users,
+        labelTr: 'Kimlik Doğrulama',
+        labelEn: 'Authentication',
+        descTr: 'JWT tabanlı merkezi kimlik doğrulama. Tüm istemciler tek güvenli kapıdan geçer.',
+        descEn: 'JWT-based central authentication. All clients pass through a single secure gateway.',
+    },
+    {
+        icon: Building2,
+        labelTr: 'Firma Yönlendirme',
+        labelEn: 'Company Routing',
+        descTr: 'Her isteği ilgili firmanın izole API ortamına yönlendirir.',
+        descEn: 'Routes each request to the isolated API environment of the relevant company.',
+    },
+    {
+        icon: Lock,
+        labelTr: 'Güvenli İletişim',
+        labelEn: 'Secure Communication',
+        descTr: 'AES-256 şifreli TLS bağlantısı. Veri asla açık iletilmez.',
+        descEn: 'AES-256 encrypted TLS connection. Data is never transmitted in plaintext.',
+    },
+    {
+        icon: Server,
+        labelTr: 'Merkezi Yönetim',
+        labelEn: 'Central Management',
+        descTr: 'Tüm firma ve kullanıcıların tek bir API katmanından yönetilmesi.',
+        descEn: 'Management of all companies and users through a single API layer.',
+    },
+];
 
-const GeneralApiPage: React.FC<GeneralApiPageProps> = ({ locale }) => {
-  const t = useTranslations('product');
+const STEPS = [
+    {
+        n: '01',
+        labelTr: 'İstek Alınır',
+        labelEn: 'Request Received',
+        descTr: 'Mobil uygulama veya harici sistem API\'ye istek gönderir.',
+        descEn: 'Mobile app or external system sends a request to the API.',
+    },
+    {
+        n: '02',
+        labelTr: 'Kimlik Doğrulanır',
+        labelEn: 'Identity Verified',
+        descTr: 'JWT token kontrol edilir; kullanıcı ve firma doğrulanır.',
+        descEn: 'JWT token is checked; user and company are verified.',
+    },
+    {
+        n: '03',
+        labelTr: 'Yönlendirilir',
+        labelEn: 'Routed',
+        descTr: 'İstek ilgili firma API\'sine yönlendirilerek yanıt döner.',
+        descEn: 'Request is routed to the relevant company API and a response is returned.',
+    },
+];
 
+const GeneralApiPage = () => {
+    const locale = useLocale();
+    const tr = locale === 'tr';
 
-  return (
-    <>
-      <Hero
-        title={t('modules.generalApi.title')}
-        subtitle={t('modules.generalApi.description')}
-        ctas={[
-          {
-            label: t('freeTrial'),
-            href: getLocalizedPath('contact', locale),
-            variant: 'primary'
-          }
-        ]}
-        align="left"
-      />
+    return (
+        <div style={{ backgroundColor: '#07090F' }} className="min-h-screen">
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('generalApiPage.features.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('generalApiPage.features.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Kullanıcı Kimlik Doğrulama */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
-              <div className="text-blue-600 mb-6 flex justify-center">
-                <Users className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.features.authentication.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.features.authentication.description')}
-              </p>
-            </div>
-
-            {/* Şirket Yönlendirme */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
-              <div className="text-green-600 mb-6 flex justify-center">
-                <Building className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.features.routing.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.features.routing.description')}
-              </p>
-            </div>
-
-            {/* Güvenli İletişim */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center">
-              <div className="text-orange-600 mb-6 flex justify-center">
-                <Lock className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.features.security.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.features.security.description')}
-              </p>
-            </div>
-
-            {/* Merkezi Yönetim */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
-              <div className="text-purple-600 mb-6 flex justify-center">
-                <Server className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.features.management.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.features.management.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('generalApiPage.architecture.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('generalApiPage.architecture.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.architecture.centralHub.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.architecture.centralHub.description')}
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.architecture.userManagement.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.architecture.userManagement.description')}
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.architecture.companyRouting.title')}</h3>
-              <p className="text-gray-700">
-                {t('generalApiPage.architecture.companyRouting.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Architecture Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('generalApiPage.architecture.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('generalApiPage.architecture.subtitle')}
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              {/* Mobile App */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  <Zap className="w-8 h-8" />
+            <section className="relative overflow-hidden pt-20 pb-16">
+                <div className="blueprint-grid absolute inset-0 opacity-30" />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-2xl">
+                        <p className="section-label text-[0.6rem] mb-4">
+                            {tr ? 'ÜRÜN · GENEL API' : 'PRODUCT · GENERAL API'}
+                        </p>
+                        <h1 className="font-heading text-4xl md:text-5xl font-bold text-[#F0EDE8] mb-5 leading-tight">
+                            <span className="text-shimmer">{tr ? 'Genel API' : 'General API'}</span>
+                        </h1>
+                        <p className="text-[#6B7A90] text-lg font-body leading-relaxed mb-8">
+                            {tr
+                                ? 'Tüm mobil istemcileri, firma API\'lerini ve donanım katmanını tek merkezden yöneten RESTful erişim noktası.'
+                                : 'The RESTful entry point that routes all mobile clients, company APIs and the hardware layer from a single center.'}
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            <a href={getLocalizedPath('contact', locale)}
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold font-body transition-all duration-200"
+                                style={{ backgroundColor: '#C8913A', color: '#07090F' }}>
+                                {tr ? 'Teklif Al' : 'Get a Quote'}
+                                <ArrowRight className="w-4 h-4" />
+                            </a>
+                            <span className="inline-flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-mono text-[#5A7090]"
+                                style={{ border: '1px solid rgba(200,145,58,0.15)' }}>
+                                <Code2 className="w-4 h-4 text-[#C8913A]" />
+                                REST · JWT · TLS
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{t('modules.mobileApp.title')}</h3>
-                <p className="text-sm text-gray-600">{t('modules.mobileApp.description')}</p>
-              </div>
+            </section>
 
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* General API */}
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-2xl p-6 shadow-lg text-center">
-                <div className="text-white mb-4 flex justify-center">
-                  <Server className="w-8 h-8" />
+            <section className="py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="section-label text-[0.6rem] mb-10 text-center">
+                        {tr ? 'ÖZELLİKLER' : 'FEATURES'}
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {FEATURES.map((f, i) => {
+                            const Icon = f.icon;
+                            return (
+                                <div key={i} className="rounded-xl p-6"
+                                    style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.12)' }}>
+                                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+                                        style={{ backgroundColor: 'rgba(200,145,58,0.1)' }}>
+                                        <Icon className="w-5 h-5 text-[#C8913A]" />
+                                    </div>
+                                    <h3 className="font-heading font-semibold text-[#F0EDE8] mb-2">
+                                        {tr ? f.labelTr : f.labelEn}
+                                    </h3>
+                                    <p className="text-[#6B7A90] text-sm font-body leading-relaxed">
+                                        {tr ? f.descTr : f.descEn}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
-                <h3 className="text-lg font-bold mb-2">{t('modules.generalApi.title')}</h3>
-                <p className="text-sm text-orange-100">{t('modules.generalApi.description')}</p>
-              </div>
+            </section>
 
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* Company API */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-                <div className="text-red-600 mb-4 flex justify-center">
-                  <Database className="w-8 h-8" />
+            <section className="py-16" style={{ borderTop: '1px solid rgba(200,145,58,0.08)' }}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="section-label text-[0.6rem] mb-10 text-center">
+                        {tr ? 'İSTEK AKIŞI' : 'REQUEST FLOW'}
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {STEPS.map((step, i) => (
+                            <div key={i} className="relative rounded-xl p-6"
+                                style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.12)' }}>
+                                <span className="font-mono text-4xl font-bold text-[#C8913A] opacity-20 absolute top-4 right-5">
+                                    {step.n}
+                                </span>
+                                <h3 className="font-heading font-semibold text-[#F0EDE8] mb-2 mt-1">
+                                    {tr ? step.labelTr : step.labelEn}
+                                </h3>
+                                <p className="text-[#6B7A90] text-sm font-body leading-relaxed">
+                                    {tr ? step.descTr : step.descEn}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{t('modules.companyApi.title')}</h3>
-                <p className="text-sm text-gray-600">{t('modules.companyApi.description')}</p>
-              </div>
-            </div>
-          </div>
+            </section>
+
+            <section className="py-16" style={{ borderTop: '1px solid rgba(200,145,58,0.08)' }}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="section-label text-[0.6rem] mb-6 text-center">
+                        {tr ? 'İLGİLİ MODÜLLER' : 'RELATED MODULES'}
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {[
+                            { key: 'product/mobile-app', labelTr: 'Mobil Uygulama', labelEn: 'Mobile App' },
+                            { key: 'product/company-api', labelTr: 'Firma API', labelEn: 'Company API' },
+                            { key: 'product/device-integration', labelTr: 'Cihaz Entegrasyonu', labelEn: 'Device Integration' },
+                        ].map(link => (
+                            <a key={link.key} href={getLocalizedPath(link.key, locale)}
+                                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-body text-[#C8913A] transition-colors hover:text-[#F0D090]"
+                                style={{ border: '1px solid rgba(200,145,58,0.2)' }}>
+                                {tr ? link.labelTr : link.labelEn}
+                                <ChevronRight className="w-3.5 h-3.5" />
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('generalApiPage.benefits.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('generalApiPage.benefits.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Güvenlik */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-              <div className="text-green-600 mb-6">
-                <Shield className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.benefits.centralized.title')}</h3>
-              <p className="text-gray-700 mb-6">
-                {t('generalApiPage.benefits.centralized.description')}
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.centralized.features.0')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.centralized.features.1')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.centralized.features.2')}
-                </li>
-              </ul>
-            </div>
-
-            {/* Ölçeklenebilirlik */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-              <div className="text-blue-600 mb-6">
-                <Globe className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.benefits.scalability.title')}</h3>
-              <p className="text-gray-700 mb-6">
-                {t('generalApiPage.benefits.scalability.description')}
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.scalability.features.0')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.scalability.features.1')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.scalability.features.2')}
-                </li>
-              </ul>
-            </div>
-
-            {/* Yönetim Kolaylığı */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-              <div className="text-purple-600 mb-6">
-                <Server className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('generalApiPage.benefits.security.title')}</h3>
-              <p className="text-gray-700 mb-6">
-                {t('generalApiPage.benefits.security.description')}
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.security.features.0')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.security.features.1')}
-                </li>
-                <li className="flex items-center text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  {t('generalApiPage.benefits.security.features.2')}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+    );
 };
 
 export default GeneralApiPage;

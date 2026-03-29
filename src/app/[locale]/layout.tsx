@@ -6,21 +6,29 @@ import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { jsonLdScriptProps } from "react-schemaorg";
 import { WebSite } from "schema-dts";
-import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
+import { Syne, Outfit, JetBrains_Mono, Raleway } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -37,13 +45,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "Metadata" });
@@ -53,32 +59,13 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#07090F" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="canonical"
-          href={`https://next-app-i18n-starter.vercel.app`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://next-app-i18n-starter.vercel.app"
-        />
-        <link
-          rel="alternate"
-          hrefLang="tr"
-          href="https://oxykeypass.com"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://oxykeypass.com/en"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="canonical" href="https://oxykeypass.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://oxykeypass.com" />
+        <link rel="alternate" hrefLang="tr" href="https://oxykeypass.com" />
+        <link rel="alternate" hrefLang="en" href="https://oxykeypass.com/en" />
         <meta name="keywords" content={t("keywords")} />
         <meta name="author" content="OxyKeyPass" />
         <meta name="robots" content="index, follow" />
@@ -88,19 +75,19 @@ export default async function RootLayout({
             "@type": "WebSite",
             name: t("title"),
             description: t("description"),
-            url: "https://next-app-i18n-starter.vercel.app",
+            url: "https://oxykeypass.com",
             inLanguage: locale,
           })}
         />
       </head>
-          <body
-            className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} antialiased`}
-            suppressHydrationWarning
-          >
+      <body
+        className={`${syne.variable} ${outfit.variable} ${jetbrainsMono.variable} ${raleway.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
@@ -136,43 +123,26 @@ export async function generateMetadata({
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `https://next-app-i18n-starter.vercel.app`,
-      siteName: "Next.js i18n Template",
-      images: [
-        {
-          url: "https://next-app-i18n-starter.vercel.app/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: t("title"),
-        },
-      ],
-      locale: locale,
+      url: "https://oxykeypass.com",
+      siteName: "OxyKeyPass",
+      images: [{ url: "https://oxykeypass.com/og-image.png", width: 1200, height: 630, alt: t("title") }],
+      locale,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["https://next-app-i18n-starter.vercel.app/og-image.png"],
-      creator: "@s0ver5",
+      images: ["https://oxykeypass.com/og-image.png"],
     },
     alternates: {
-      canonical: `https://next-app-i18n-starter.vercel.app`,
-      languages: {
-        tr: "https://oxykeypass.com",
-        en: "https://oxykeypass.com/en",
-      },
+      canonical: "https://oxykeypass.com",
+      languages: { tr: "https://oxykeypass.com", en: "https://oxykeypass.com/en" },
     },
     robots: {
       index: true,
       follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
+      googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
     },
   };
 }

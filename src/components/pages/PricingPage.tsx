@@ -1,287 +1,319 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
+'use client';
+
+import { useLocale } from 'next-intl';
 import { getLocalizedPath } from '@/utils/routes';
-import Hero from '@/components/Hero';
-import { 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Building,
-  Crown
+import {
+    CheckCircle, ArrowRight, Zap, Building2, Network,
+    Users, Cpu, LayoutDashboard, PhoneCall
 } from 'lucide-react';
 
-interface PricingPageProps {
-  locale: string;
-}
-
-const PricingPage: React.FC<PricingPageProps> = ({ locale }) => {
-  const tPricing = useTranslations('pricing');
-
-
-  const plans = [
+const PLANS = [
     {
-      id: 'starter',
-      name: tPricing('plans.starter.name'),
-      price: tPricing('plans.starter.price'),
-      period: tPricing('plans.starter.period'),
-      description: tPricing('plans.starter.description'),
-      icon: Zap,
-      color: 'blue',
-      popular: false,
-      features: [
-        tPricing('plans.starter.features.0'),
-        tPricing('plans.starter.features.1'),
-        tPricing('plans.starter.features.2'),
-        tPricing('plans.starter.features.3'),
-        tPricing('plans.starter.features.4')
-      ]
+        key: 'starter',
+        labelTr: 'Küçük Ölçekli',
+        labelEn: 'Small Scale',
+        tagTr: 'BAŞLANGIÇ',
+        tagEn: 'STARTER',
+        descTr: 'Tek bina veya küçük ölçekli tesisler için temel erişim kontrol çözümü.',
+        descEn: 'Basic access control solution for single buildings or small-scale facilities.',
+        icon: Zap,
+        highlight: false,
+        featuresTr: [
+            '1 site / bina',
+            '50\'ye kadar kullanıcı',
+            'Mobil uygulama erişimi',
+            'QR kod geçiş',
+            'Temel raporlama',
+            'E-posta desteği',
+        ],
+        featuresEn: [
+            '1 site / building',
+            'Up to 50 users',
+            'Mobile app access',
+            'QR code entry',
+            'Basic reporting',
+            'Email support',
+        ],
     },
     {
-      id: 'professional',
-      name: tPricing('plans.professional.name'),
-      price: tPricing('plans.professional.price'),
-      period: tPricing('plans.professional.period'),
-      description: tPricing('plans.professional.description'),
-      icon: Shield,
-      color: 'green',
-      popular: true,
-      features: [
-        tPricing('plans.professional.features.0'),
-        tPricing('plans.professional.features.1'),
-        tPricing('plans.professional.features.2'),
-        tPricing('plans.professional.features.3'),
-        tPricing('plans.professional.features.4'),
-        tPricing('plans.professional.features.5')
-      ]
+        key: 'professional',
+        labelTr: 'Kurumsal',
+        labelEn: 'Professional',
+        tagTr: 'POPÜLER',
+        tagEn: 'POPULAR',
+        descTr: 'Çok katlı yapılar ve orta ölçekli kurumlar için gelişmiş erişim yönetimi.',
+        descEn: 'Advanced access management for multi-floor buildings and mid-size organizations.',
+        icon: Building2,
+        highlight: true,
+        featuresTr: [
+            'Birden fazla site desteği',
+            'Sınırsız kullanıcı',
+            'Mobil + admin panel',
+            'RFID ve QR geçiş',
+            'Detaylı log ve raporlama',
+            'Firma API entegrasyonu',
+            'Öncelikli destek',
+        ],
+        featuresEn: [
+            'Multi-site support',
+            'Unlimited users',
+            'Mobile + admin panel',
+            'RFID & QR entry',
+            'Detailed logs & reporting',
+            'Company API integration',
+            'Priority support',
+        ],
     },
     {
-      id: 'enterprise',
-      name: tPricing('plans.enterprise.name'),
-      price: tPricing('plans.enterprise.price'),
-      period: tPricing('plans.enterprise.period'),
-      description: tPricing('plans.enterprise.description'),
-      icon: Crown,
-      color: 'purple',
-      popular: false,
-      features: [
-        tPricing('plans.enterprise.features.0'),
-        tPricing('plans.enterprise.features.1'),
-        tPricing('plans.enterprise.features.2'),
-        tPricing('plans.enterprise.features.3'),
-        tPricing('plans.enterprise.features.4'),
-        tPricing('plans.enterprise.features.5'),
-        tPricing('plans.enterprise.features.6')
-      ]
-    }
-  ];
+        key: 'enterprise',
+        labelTr: 'Çok Noktalı',
+        labelEn: 'Multi-Site',
+        tagTr: 'KURUMSAL',
+        tagEn: 'ENTERPRISE',
+        descTr: 'Coğrafi olarak dağıtık, çok noktalı kurumsal yapılar için tam kapsamlı çözüm.',
+        descEn: 'Full-scope solution for geographically distributed, multi-location enterprises.',
+        icon: Network,
+        highlight: false,
+        featuresTr: [
+            'Sınırsız site ve konum',
+            'Sınırsız kullanıcı',
+            'Özel iş koordinasyonu',
+            'Tüm donanım desteği',
+            'Webhook ve özel entegrasyon',
+            'SLA güvenceli uptime',
+            'Yerinde kurulum desteği',
+            'Dedike hesap yöneticisi',
+        ],
+        featuresEn: [
+            'Unlimited sites & locations',
+            'Unlimited users',
+            'Custom workflow engine',
+            'All hardware support',
+            'Webhook & custom integrations',
+            'SLA-backed uptime',
+            'On-site installation support',
+            'Dedicated account manager',
+        ],
+    },
+];
 
-  const getColorClasses = (color: string, popular: boolean = false) => {
-    const colors = {
-      blue: {
-        bg: popular ? 'from-blue-500 to-blue-600' : 'from-blue-50 to-blue-100',
-        text: popular ? 'text-white' : 'text-blue-600',
-        border: popular ? 'border-blue-500' : 'border-blue-200',
-        button: popular ? 'bg-white text-blue-600 hover:bg-blue-50' : 'bg-blue-600 hover:bg-blue-700 text-white'
-      },
-      green: {
-        bg: popular ? 'from-green-500 to-green-600' : 'from-green-50 to-green-100',
-        text: popular ? 'text-white' : 'text-green-600',
-        border: popular ? 'border-green-500' : 'border-green-200',
-        button: popular ? 'bg-white text-green-600 hover:bg-green-50' : 'bg-green-600 hover:bg-green-700 text-white'
-      },
-      purple: {
-        bg: popular ? 'from-purple-500 to-purple-600' : 'from-purple-50 to-purple-100',
-        text: popular ? 'text-white' : 'text-purple-600',
-        border: popular ? 'border-purple-500' : 'border-purple-200',
-        button: popular ? 'bg-white text-purple-600 hover:bg-purple-50' : 'bg-purple-600 hover:bg-purple-700 text-white'
-      }
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
+const WHY_ITEMS = [
+    {
+        icon: Users,
+        labelTr: 'Kolay Kullanım',
+        labelEn: 'Easy to Use',
+        descTr: 'Teknik bilgi gerekmeden kurulum ve yönetim.',
+        descEn: 'Setup and management without technical expertise.',
+    },
+    {
+        icon: Cpu,
+        labelTr: 'Donanım Uyumlu',
+        labelEn: 'Hardware Compatible',
+        descTr: 'Raspberry Pi tabanlı cihazlarla entegre çalışır.',
+        descEn: 'Works integrated with Raspberry Pi-based devices.',
+    },
+    {
+        icon: LayoutDashboard,
+        labelTr: 'Merkezi Yönetim',
+        labelEn: 'Central Management',
+        descTr: 'Tüm noktaları tek panelden kontrol edin.',
+        descEn: 'Control all points from a single dashboard.',
+    },
+    {
+        icon: PhoneCall,
+        labelTr: 'Hızlı Destek',
+        labelEn: 'Fast Support',
+        descTr: 'Kurulum ve sonrasında yanınızdayız.',
+        descEn: 'We\'re with you during and after installation.',
+    },
+];
 
-  return (
-    <>
-      <Hero
-        title={tPricing('title')}
-        subtitle={tPricing('subtitle')}
-        ctas={[
-          {
-            label: tPricing('cta.requestDemo'),
-            href: getLocalizedPath('contact', locale),
-            variant: 'primary'
-          }
-        ]}
-        align="left"
-      />
+const PricingPage = () => {
+    const locale = useLocale();
+    const tr = locale === 'tr';
 
-      {/* Pricing Plans Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {tPricing('plansTitle')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {tPricing('plansSubtitle')}
-            </p>
-          </div>
+    return (
+        <div style={{ backgroundColor: '#07090F' }} className="min-h-screen">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan) => {
-              const IconComponent = plan.icon;
-              const colors = getColorClasses(plan.color, plan.popular);
-              
-              return (
-                <div
-                  key={plan.id}
-                  className={`relative bg-gradient-to-br ${colors.bg} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border ${colors.border}`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        {tPricing('popular')}
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className={`${colors.text} mb-6 flex justify-center`}>
-                    <IconComponent className="w-12 h-12" />
-                  </div>
-                  
-                  <h3 className={`text-2xl font-bold mb-2 text-center ${colors.text}`}>
-                    {plan.name}
-                  </h3>
-                  
-                  <div className={`text-center mb-4 ${colors.text}`}>
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-lg ml-2">{plan.period}</span>
-                  </div>
-                  
-                  <p className={`text-center mb-6 ${colors.text === 'text-white' ? 'text-blue-100' : 'text-gray-700'}`}>
-                    {plan.description}
-                  </p>
-
-                  <div className="space-y-3 mb-8">
-                    {plan.features.map((feature, index) => (
-                      <div key={index} className="flex items-center">
-                        <CheckCircle className={`w-5 h-5 mr-3 flex-shrink-0 ${colors.text === 'text-white' ? 'text-green-300' : 'text-green-500'}`} />
-                        <span className={colors.text === 'text-white' ? 'text-blue-100' : 'text-gray-700'}>
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-6">
-                    <a
-                      href={getLocalizedPath('contact', locale)}
-                      className={`inline-flex items-center justify-center w-full px-4 py-3 rounded-lg font-semibold transition-colors ${colors.button}`}
-                    >
-                      {tPricing('getStarted')}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </div>
+            {/* ── Hero ── */}
+            <section className="relative overflow-hidden pt-20 pb-16">
+                <div className="blueprint-grid absolute inset-0 opacity-30" />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="section-label text-[0.6rem] mb-4">
+                        {tr ? 'FİYATLANDIRMA' : 'PRICING'}
+                    </p>
+                    <h1 className="font-heading text-4xl md:text-5xl font-bold text-[#F0EDE8] mb-5 leading-tight">
+                        {tr ? 'İhtiyacınıza Uygun' : 'The Right Plan'}{' '}
+                        <span className="text-shimmer">{tr ? 'Plan' : 'For Your Needs'}</span>
+                    </h1>
+                    <p className="text-[#6B7A90] text-lg max-w-2xl mx-auto font-body">
+                        {tr
+                            ? 'Tesisinizin ölçeğine göre en uygun paketi seçin. Fiyat teklifi için bizimle iletişime geçin.'
+                            : 'Choose the package that fits your facility\'s scale. Contact us for a price quote.'}
+                    </p>
                 </div>
-              );
-            })}
-          </div>
+            </section>
+
+            {/* ── Plans Grid ── */}
+            <section className="pb-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {PLANS.map((plan) => {
+                            const Icon = plan.icon;
+                            return (
+                                <div
+                                    key={plan.key}
+                                    className="relative rounded-2xl overflow-hidden flex flex-col"
+                                    style={{
+                                        backgroundColor: plan.highlight ? 'rgba(200,145,58,0.06)' : '#0D1117',
+                                        border: plan.highlight
+                                            ? '1.5px solid rgba(200,145,58,0.5)'
+                                            : '1px solid rgba(200,145,58,0.12)',
+                                        boxShadow: plan.highlight ? '0 0 40px rgba(200,145,58,0.08)' : 'none',
+                                    }}
+                                >
+                                    {plan.highlight && (
+                                        <div className="absolute top-0 left-0 right-0 h-0.5"
+                                            style={{ background: 'linear-gradient(90deg, transparent, #C8913A, transparent)' }} />
+                                    )}
+
+                                    <div className="p-8 flex-1">
+                                        {/* Tag */}
+                                        <div className="flex items-center justify-between mb-6">
+                                            <span className="section-label text-[0.55rem]">
+                                                {tr ? plan.tagTr : plan.tagEn}
+                                            </span>
+                                            <div
+                                                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                                                style={{ backgroundColor: 'rgba(200,145,58,0.1)', border: '1px solid rgba(200,145,58,0.2)' }}
+                                            >
+                                                <Icon className="w-5 h-5 text-[#C8913A]" />
+                                            </div>
+                                        </div>
+
+                                        {/* Name */}
+                                        <h3 className="font-heading text-2xl font-bold text-[#F0EDE8] mb-2">
+                                            {tr ? plan.labelTr : plan.labelEn}
+                                        </h3>
+                                        <p className="text-[#6B7A90] text-sm font-body mb-6 leading-relaxed">
+                                            {tr ? plan.descTr : plan.descEn}
+                                        </p>
+
+                                        {/* Price placeholder */}
+                                        <div className="mb-6 py-4 rounded-xl text-center"
+                                            style={{ border: '1px dashed rgba(200,145,58,0.2)', backgroundColor: 'rgba(200,145,58,0.03)' }}>
+                                            <p className="text-[#C8913A] text-xs font-mono tracking-widest uppercase">
+                                                {tr ? 'Teklif için iletişime geçin' : 'Contact us for pricing'}
+                                            </p>
+                                        </div>
+
+                                        {/* Features */}
+                                        <ul className="space-y-2.5">
+                                            {(tr ? plan.featuresTr : plan.featuresEn).map((f, i) => (
+                                                <li key={i} className="flex items-center gap-2.5">
+                                                    <CheckCircle className="w-4 h-4 text-[#C8913A] flex-shrink-0" />
+                                                    <span className="text-[#8A9AB0] text-sm font-body">{f}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* CTA */}
+                                    <div className="px-8 pb-8">
+                                        <a
+                                            href={getLocalizedPath('contact', locale)}
+                                            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-medium font-body transition-all duration-200"
+                                            style={plan.highlight
+                                                ? { backgroundColor: '#C8913A', color: '#07090F' }
+                                                : { border: '1px solid rgba(200,145,58,0.3)', color: '#C8913A', backgroundColor: 'transparent' }
+                                            }
+                                        >
+                                            {tr ? 'Teklif Al' : 'Get a Quote'}
+                                            <ArrowRight className="w-4 h-4" />
+                                        </a>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Why OxyKeyPass ── */}
+            <section className="py-16" style={{ borderTop: '1px solid rgba(200,145,58,0.08)' }}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <p className="section-label text-[0.6rem] mb-3">
+                            {tr ? 'NEDEN OXYKEYPASS' : 'WHY OXYKEYPASS'}
+                        </p>
+                        <h2 className="font-heading text-3xl font-bold text-[#F0EDE8]">
+                            {tr ? 'Her Pakette Dahil Olanlar' : 'Included in Every Plan'}
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {WHY_ITEMS.map((item, i) => {
+                            const Icon = item.icon;
+                            return (
+                                <div key={i} className="p-6 rounded-xl text-center"
+                                    style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.1)' }}>
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
+                                        style={{ backgroundColor: 'rgba(200,145,58,0.1)' }}>
+                                        <Icon className="w-6 h-6 text-[#C8913A]" />
+                                    </div>
+                                    <h4 className="font-heading font-semibold text-[#F0EDE8] mb-2">
+                                        {tr ? item.labelTr : item.labelEn}
+                                    </h4>
+                                    <p className="text-[#6B7A90] text-sm font-body">
+                                        {tr ? item.descTr : item.descEn}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── CTA Banner ── */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="relative rounded-2xl overflow-hidden p-10 text-center"
+                        style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.2)' }}>
+                        <div className="scan-line absolute inset-0 pointer-events-none" />
+                        <div className="relative">
+                            <p className="section-label text-[0.6rem] mb-4">
+                                {tr ? 'ÖZEL TEKLİF' : 'CUSTOM QUOTE'}
+                            </p>
+                            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#F0EDE8] mb-4">
+                                {tr ? 'Projenizi Konuşalım' : 'Let\'s Talk About Your Project'}
+                            </h2>
+                            <p className="text-[#6B7A90] font-body mb-8 max-w-lg mx-auto">
+                                {tr
+                                    ? 'Tesisinizin ihtiyaçlarına özel bir çözüm ve fiyat teklifi için uzman ekibimizle iletişime geçin.'
+                                    : 'Contact our expert team for a custom solution and pricing tailored to your facility\'s needs.'}
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a
+                                    href={getLocalizedPath('contact', locale)}
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-semibold font-body transition-all duration-200"
+                                    style={{ backgroundColor: '#C8913A', color: '#07090F' }}
+                                >
+                                    {tr ? 'Teklif Al' : 'Get a Quote'}
+                                    <ArrowRight className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href={getLocalizedPath('product', locale)}
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-semibold font-body transition-all duration-200"
+                                    style={{ border: '1px solid rgba(200,145,58,0.35)', color: '#C8913A' }}
+                                >
+                                    {tr ? 'Ürünü İncele' : 'Explore Product'}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      {/* Features Comparison Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {tPricing('comparison.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {tPricing('comparison.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-blue-600 mb-6 flex justify-center">
-                <Users className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{tPricing('comparison.users.title')}</h3>
-              <p className="text-gray-700">
-                {tPricing('comparison.users.description')}
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-green-600 mb-6 flex justify-center">
-                <Building className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{tPricing('comparison.devices.title')}</h3>
-              <p className="text-gray-700">
-                {tPricing('comparison.devices.description')}
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-purple-600 mb-6 flex justify-center">
-                <Shield className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{tPricing('comparison.support.title')}</h3>
-              <p className="text-gray-700">
-                {tPricing('comparison.support.description')}
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-orange-600 mb-6 flex justify-center">
-                <Zap className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{tPricing('comparison.setup.title')}</h3>
-              <p className="text-gray-700">
-                {tPricing('comparison.setup.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {tPricing('cta.title')}
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            {tPricing('cta.subtitle')}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={getLocalizedPath('contact', locale)}
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors flex items-center"
-            >
-              {tPricing('cta.freeConsultation')}
-              <ArrowRight className="w-5 h-5 mr-2" />
-            </a>
-            <a
-              href={getLocalizedPath('product', locale)}
-              className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-400 transition-colors flex items-center"
-            >
-              {tPricing('cta.productDetails')}
-              <ArrowRight className="w-5 h-5 mr-2" />
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+    );
 };
 
 export default PricingPage;

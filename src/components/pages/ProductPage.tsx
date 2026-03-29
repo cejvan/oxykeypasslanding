@@ -1,672 +1,270 @@
 'use client';
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { getLocalizedPath } from '@/utils/routes';
-import Hero from '@/components/Hero';
 import {
-  Shield,
-  Smartphone,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Award,
-  Zap,
-  Settings,
-  Building,
-  Factory,
-  Hospital,
-  GraduationCap,
-  Warehouse,
-  ShoppingBag,
-  Star,
-  ChevronDown,
-  ChevronUp
+    Smartphone, Code2, Cpu, MonitorDot, Building2, GitBranch,
+    ArrowRight, ChevronRight, Shield, Zap, Globe
 } from 'lucide-react';
 
+const MODULES = [
+    {
+        key: 'product/mobile-app',
+        icon: Smartphone,
+        labelTr: 'Mobil Uygulama',
+        labelEn: 'Mobile App',
+        descTr: 'iOS ve Android üzerinde QR/RFID tabanlı geçiş, geçmiş görüntüleme ve anlık bildirimler.',
+        descEn: 'QR/RFID-based entry, history viewing and instant notifications on iOS and Android.',
+        tagTr: 'iOS · ANDROID',
+        tagEn: 'iOS · ANDROID',
+    },
+    {
+        key: 'product/general-api',
+        icon: Code2,
+        labelTr: 'Genel API',
+        labelEn: 'General API',
+        descTr: 'Merkezi kimlik doğrulama, firma yönlendirme ve tüm istemcilere servis eden RESTful katman.',
+        descEn: 'Central authentication, company routing and RESTful layer serving all clients.',
+        tagTr: 'REST · JWT',
+        tagEn: 'REST · JWT',
+    },
+    {
+        key: 'product/device-integration',
+        icon: Cpu,
+        labelTr: 'Cihaz Entegrasyonu',
+        labelEn: 'Device Integration',
+        descTr: 'Raspberry Pi tabanlı okuyucu cihazlarının bağlantısı, GPIO kontrolü ve offline çalışma desteği.',
+        descEn: 'Connection of Raspberry Pi-based reader devices, GPIO control and offline operation support.',
+        tagTr: 'RASPBERRY PI · GPIO',
+        tagEn: 'RASPBERRY PI · GPIO',
+    },
+    {
+        key: 'product/admin-panels',
+        icon: MonitorDot,
+        labelTr: 'Yönetim Panelleri',
+        labelEn: 'Admin Panels',
+        descTr: 'Site, daire, kiracı ve erişim kurallarını yöneten web tabanlı yönetim arayüzü.',
+        descEn: 'Web-based management interface for sites, units, tenants and access rules.',
+        tagTr: 'WEB · DASHBOARD',
+        tagEn: 'WEB · DASHBOARD',
+    },
+    {
+        key: 'product/company-api',
+        icon: Building2,
+        labelTr: 'Firma API',
+        labelEn: 'Company API',
+        descTr: 'Firma bazlı izole ortamlar, webhook desteği ve mevcut ERP/BMS sistemlerine entegrasyon.',
+        descEn: 'Company-isolated environments, webhook support and integration with existing ERP/BMS systems.',
+        tagTr: 'WEBHOOK · ERP',
+        tagEn: 'WEBHOOK · ERP',
+    },
+    {
+        key: 'product/workflow',
+        icon: GitBranch,
+        labelTr: 'İş Koordinasyonu',
+        labelEn: 'Workflow',
+        descTr: 'Kural tabanlı otomasyon, onay akışları ve erişim olaylarına bağlı tetikleyiciler.',
+        descEn: 'Rule-based automation, approval flows and triggers tied to access events.',
+        tagTr: 'OTOMASYON · RULES',
+        tagEn: 'AUTOMATION · RULES',
+    },
+];
+
+const SPECS = [
+    { icon: Shield, labelTr: 'AES-256 Şifreleme', labelEn: 'AES-256 Encryption', valTr: 'Uçtan Uca', valEn: 'End-to-End' },
+    { icon: Zap, labelTr: 'Yanıt Süresi', labelEn: 'Response Time', valTr: '< 2 saniye', valEn: '< 2 seconds' },
+    { icon: Globe, labelTr: 'Uptime', labelEn: 'Uptime', valTr: '%99.9 SLA', valEn: '99.9% SLA' },
+    { icon: Smartphone, labelTr: 'Platform', labelEn: 'Platform', valTr: 'iOS & Android', valEn: 'iOS & Android' },
+];
+
 const ProductPage = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const t = useTranslations("product");
-  const locale = useLocale();
+    const locale = useLocale();
+    const tr = locale === 'tr';
 
-  const benefits = [
-    {
-      icon: <Users className="w-6 h-6 text-blue-600" />,
-      title: t("benefits.userFriendly.title"),
-      description: t("benefits.userFriendly.description")
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-green-600" />,
-      title: t("benefits.quickSetup.title"),
-      description: t("benefits.quickSetup.description")
-    },
-    {
-      icon: <Award className="w-6 h-6 text-purple-600" />,
-      title: t("benefits.certified.title"),
-      description: t("benefits.certified.description")
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-orange-600" />,
-      title: t("benefits.compliant.title"),
-      description: t("benefits.compliant.description")
-    }
-  ];
+    return (
+        <div style={{ backgroundColor: '#07090F' }} className="min-h-screen">
 
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <Hero
-        title={t("title")}
-        subtitle={t("subtitle")}
-        ctas={[
-          {
-            label: t("freeTrial"),
-            href: getLocalizedPath("contact", locale),
-            variant: "primary"
-          },
-          {
-            label: t("downloadDemo"),
-            href: getLocalizedPath("contact", locale),
-            variant: "outline"
-          }
-        ]}
-        backgroundImageUrl=""
-      />
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("modules.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("modules.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Mobile App Module */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-blue-600 mb-6">
-                <Smartphone className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.mobileApp.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.mobileApp.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.mobileApp.features.0"),
-                  t("modules.mobileApp.features.1"),
-                  t("modules.mobileApp.features.2"),
-                  t("modules.mobileApp.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/mobile-app", locale)}
-                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-
-            {/* General API Module */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-orange-600 mb-6">
-                <Zap className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.generalApi.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.generalApi.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.generalApi.features.0"),
-                  t("modules.generalApi.features.1"),
-                  t("modules.generalApi.features.2"),
-                  t("modules.generalApi.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/general-api", locale)}
-                className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-
-            {/* Device Integration Module */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-purple-600 mb-6">
-                <Shield className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.deviceIntegration.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.deviceIntegration.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.deviceIntegration.features.0"),
-                  t("modules.deviceIntegration.features.1"),
-                  t("modules.deviceIntegration.features.2"),
-                  t("modules.deviceIntegration.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/device-integration", locale)}
-                className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-
-            {/* Admin Panels Module */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow md:col-start-1 md:col-end-2">
-              <div className="text-green-600 mb-6">
-                <Settings className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.adminPanels.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.adminPanels.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.adminPanels.features.0"),
-                  t("modules.adminPanels.features.1"),
-                  t("modules.adminPanels.features.2"),
-                  t("modules.adminPanels.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/admin-panels", locale)}
-                className="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-
-            {/* Company API Module */}
-            <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow md:col-start-2 md:col-end-3">
-              <div className="text-red-600 mb-6">
-                <Building className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.companyApi.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.companyApi.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.companyApi.features.0"),
-                  t("modules.companyApi.features.1"),
-                  t("modules.companyApi.features.2"),
-                  t("modules.companyApi.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/company-api", locale)}
-                className="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-
-            {/* Workflow Module */}
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow md:col-start-3 md:col-end-4">
-              <div className="text-indigo-600 mb-6">
-                <ArrowRight className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("modules.workflow.title")}
-              </h3>
-              <p className="text-gray-700 mb-6">
-                {t("modules.workflow.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  t("modules.workflow.features.0"),
-                  t("modules.workflow.features.1"),
-                  t("modules.workflow.features.2"),
-                  t("modules.workflow.features.3")
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={getLocalizedPath("product/workflow", locale)}
-                className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
-              >
-                {t("viewDetails")}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("benefits.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("benefits.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  {benefit.icon}
+            {/* ── Hero ── */}
+            <section className="relative overflow-hidden pt-20 pb-16">
+                <div className="blueprint-grid absolute inset-0 opacity-30" />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="section-label text-[0.6rem] mb-4">
+                        {tr ? 'ÜRÜN' : 'PRODUCT'}
+                    </p>
+                    <h1 className="font-heading text-4xl md:text-5xl font-bold text-[#F0EDE8] mb-5 leading-tight">
+                        {tr ? 'Tam Entegre' : 'Fully Integrated'}{' '}
+                        <span className="text-shimmer">{tr ? 'Erişim Kontrol Platformu' : 'Access Control Platform'}</span>
+                    </h1>
+                    <p className="text-[#6B7A90] text-lg max-w-2xl mx-auto font-body">
+                        {tr
+                            ? 'Mobil uygulamadan donanım katmanına, yönetim panelinden API\'ye kadar birbiriyle konuşan altı bileşen.'
+                            : 'Six interconnected components from mobile app to hardware layer, from admin panel to API.'}
+                    </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
+            </section>
+
+            {/* ── Module Cards ── */}
+            <section className="pb-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {MODULES.map((mod) => {
+                            const Icon = mod.icon;
+                            return (
+                                <a
+                                    key={mod.key}
+                                    href={getLocalizedPath(mod.key, locale)}
+                                    className="group relative rounded-2xl p-7 flex flex-col transition-all duration-300 hover:border-[rgba(200,145,58,0.4)]"
+                                    style={{
+                                        backgroundColor: '#0D1117',
+                                        border: '1px solid rgba(200,145,58,0.12)',
+                                    }}
+                                >
+                                    {/* Icon + tag row */}
+                                    <div className="flex items-start justify-between mb-5">
+                                        <div
+                                            className="w-12 h-12 rounded-xl flex items-center justify-center"
+                                            style={{ backgroundColor: 'rgba(200,145,58,0.1)', border: '1px solid rgba(200,145,58,0.2)' }}
+                                        >
+                                            <Icon className="w-6 h-6 text-[#C8913A]" />
+                                        </div>
+                                        <span className="text-[0.55rem] font-mono text-[#5A7090] tracking-widest">
+                                            {tr ? mod.tagTr : mod.tagEn}
+                                        </span>
+                                    </div>
+
+                                    <h3 className="font-heading text-xl font-bold text-[#F0EDE8] mb-2">
+                                        {tr ? mod.labelTr : mod.labelEn}
+                                    </h3>
+                                    <p className="text-[#6B7A90] text-sm font-body leading-relaxed flex-1">
+                                        {tr ? mod.descTr : mod.descEn}
+                                    </p>
+
+                                    <div className="mt-5 flex items-center gap-1.5 text-[#C8913A] text-sm font-medium font-body
+                                        opacity-70 group-hover:opacity-100 transition-opacity">
+                                        {tr ? 'Detayları Gör' : 'View Details'}
+                                        <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                                    </div>
+                                </a>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Architecture Flow ── */}
+            <section className="py-16" style={{ borderTop: '1px solid rgba(200,145,58,0.08)' }}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <p className="section-label text-[0.6rem] mb-3">
+                            {tr ? 'MİMARİ' : 'ARCHITECTURE'}
+                        </p>
+                        <h2 className="font-heading text-3xl font-bold text-[#F0EDE8]">
+                            {tr ? 'Bileşenler Nasıl Bağlanır?' : 'How Do the Components Connect?'}
+                        </h2>
+                    </div>
+
+                    <div className="relative rounded-2xl p-8 overflow-hidden"
+                        style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.12)' }}>
+                        <div className="scan-line absolute inset-0 pointer-events-none opacity-50" />
+                        <div className="relative flex flex-col md:flex-row items-center justify-center gap-3">
+                            {[
+                                { labelTr: 'Mobil Uygulama', labelEn: 'Mobile App', sub: 'iOS / Android' },
+                                { labelTr: 'Genel API', labelEn: 'General API', sub: 'REST / JWT' },
+                                { labelTr: 'Firma API', labelEn: 'Company API', sub: 'Webhook / SDK' },
+                                { labelTr: 'Cihaz Katmanı', labelEn: 'Device Layer', sub: 'Raspberry Pi' },
+                            ].map((node, i, arr) => (
+                                <div key={i} className="flex flex-col md:flex-row items-center gap-3">
+                                    <div className="rounded-xl px-5 py-3 text-center"
+                                        style={{
+                                            backgroundColor: i === 1 ? 'rgba(200,145,58,0.12)' : 'rgba(255,255,255,0.03)',
+                                            border: i === 1 ? '1px solid rgba(200,145,58,0.4)' : '1px solid rgba(200,145,58,0.1)',
+                                        }}>
+                                        <p className={`text-sm font-semibold font-body ${i === 1 ? 'text-[#C8913A]' : 'text-[#E8EDF5]'}`}>
+                                            {tr ? node.labelTr : node.labelEn}
+                                        </p>
+                                        <p className="text-[#5A7090] text-[0.65rem] font-mono mt-0.5">{node.sub}</p>
+                                    </div>
+                                    {i < arr.length - 1 && (
+                                        <ArrowRight className="w-4 h-4 text-[#3A4555] rotate-0 md:rotate-0 hidden md:block" />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-6 text-center">
+                            <p className="text-[#3A4555] text-xs font-mono">
+                                {tr
+                                    ? 'Yönetim Panelleri ve İş Koordinasyonu tüm katmanlara bağlanır'
+                                    : 'Admin Panels & Workflow connect to all layers'}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Specs ── */}
+            <section className="py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        {SPECS.map((spec, i) => {
+                            const Icon = spec.icon;
+                            return (
+                                <div key={i} className="rounded-xl p-6 text-center"
+                                    style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.1)' }}>
+                                    <Icon className="w-6 h-6 text-[#C8913A] mx-auto mb-3" />
+                                    <p className="text-[#F0EDE8] text-lg font-bold font-mono mb-1">
+                                        {tr ? spec.valTr : spec.valEn}
+                                    </p>
+                                    <p className="text-[#5A7090] text-xs font-body">
+                                        {tr ? spec.labelTr : spec.labelEn}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── CTA ── */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="relative rounded-2xl overflow-hidden p-10 text-center"
+                        style={{ backgroundColor: '#0D1117', border: '1px solid rgba(200,145,58,0.2)' }}>
+                        <div className="scan-line absolute inset-0 pointer-events-none" />
+                        <div className="relative">
+                            <p className="section-label text-[0.6rem] mb-4">
+                                {tr ? 'BAŞLAYIN' : 'GET STARTED'}
+                            </p>
+                            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#F0EDE8] mb-4">
+                                {tr ? 'Sistemi Tesisinize Kuralım' : 'Let\'s Deploy the System at Your Facility'}
+                            </h2>
+                            <p className="text-[#6B7A90] font-body mb-8 max-w-lg mx-auto">
+                                {tr
+                                    ? 'Kurulum danışmanlığı ve fiyat teklifi için ekibimizle iletişime geçin.'
+                                    : 'Contact our team for installation consulting and a price quote.'}
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a
+                                    href={getLocalizedPath('contact', locale)}
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-semibold font-body transition-all duration-200"
+                                    style={{ backgroundColor: '#C8913A', color: '#07090F' }}
+                                >
+                                    {tr ? 'Teklif Al' : 'Get a Quote'}
+                                    <ArrowRight className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href={getLocalizedPath('solutions', locale)}
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-semibold font-body transition-all duration-200"
+                                    style={{ border: '1px solid rgba(200,145,58,0.35)', color: '#C8913A' }}
+                                >
+                                    {tr ? 'Çözümleri İncele' : 'Browse Solutions'}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("howItWorks.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("howItWorks.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Settings className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("howItWorks.steps.step1.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("howItWorks.steps.step1.description")}
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("howItWorks.steps.step2.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("howItWorks.steps.step2.description")}
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("howItWorks.steps.step3.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("howItWorks.steps.step3.description")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("useCases.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("useCases.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <Building className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.office.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.office.description")}
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <Factory className="w-12 h-12 text-orange-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.factory.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.factory.description")}
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <Hospital className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.hospital.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.hospital.description")}
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <GraduationCap className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.school.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.school.description")}
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <Warehouse className="w-12 h-12 text-purple-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.warehouse.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.warehouse.description")}
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <ShoppingBag className="w-12 h-12 text-pink-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t("useCases.cases.retail.title")}
-              </h3>
-              <p className="text-gray-600">
-                {t("useCases.cases.retail.description")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("technicalSpecs.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("technicalSpecs.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6">
-              <Shield className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("technicalSpecs.specs.security.title")}
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  t("technicalSpecs.specs.security.items.0"),
-                  t("technicalSpecs.specs.security.items.1"),
-                  t("technicalSpecs.specs.security.items.2"),
-                  t("technicalSpecs.specs.security.items.3")
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6">
-              <Zap className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("technicalSpecs.specs.performance.title")}
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  t("technicalSpecs.specs.performance.items.0"),
-                  t("technicalSpecs.specs.performance.items.1"),
-                  t("technicalSpecs.specs.performance.items.2"),
-                  t("technicalSpecs.specs.performance.items.3")
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6">
-              <Settings className="w-12 h-12 text-purple-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("technicalSpecs.specs.integration.title")}
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  t("technicalSpecs.specs.integration.items.0"),
-                  t("technicalSpecs.specs.integration.items.1"),
-                  t("technicalSpecs.specs.integration.items.2"),
-                  t("technicalSpecs.specs.integration.items.3")
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6">
-              <Award className="w-12 h-12 text-orange-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {t("technicalSpecs.specs.support.title")}
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  t("technicalSpecs.specs.support.items.0"),
-                  t("technicalSpecs.specs.support.items.1"),
-                  t("technicalSpecs.specs.support.items.2"),
-                  t("technicalSpecs.specs.support.items.3")
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("testimonials.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("testimonials.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;{t("testimonials.reviews.review1.content")}&rdquo;
-              </p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">{t("testimonials.reviews.review1.name")}</p>
-                <p className="text-sm text-gray-600">{t("testimonials.reviews.review1.position")}</p>
-                <p className="text-sm text-blue-600">{t("testimonials.reviews.review1.company")}</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;{t("testimonials.reviews.review2.content")}&rdquo;
-              </p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">{t("testimonials.reviews.review2.name")}</p>
-                <p className="text-sm text-gray-600">{t("testimonials.reviews.review2.position")}</p>
-                <p className="text-sm text-blue-600">{t("testimonials.reviews.review2.company")}</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;{t("testimonials.reviews.review3.content")}&rdquo;
-              </p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">{t("testimonials.reviews.review3.name")}</p>
-                <p className="text-sm text-gray-600">{t("testimonials.reviews.review3.position")}</p>
-                <p className="text-sm text-blue-600">{t("testimonials.reviews.review3.company")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("faq.title")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t("faq.subtitle")}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              { q: "q1", question: t("faq.questions.q1.question"), answer: t("faq.questions.q1.answer") },
-              { q: "q2", question: t("faq.questions.q2.question"), answer: t("faq.questions.q2.answer") },
-              { q: "q3", question: t("faq.questions.q3.question"), answer: t("faq.questions.q3.answer") },
-              { q: "q4", question: t("faq.questions.q4.question"), answer: t("faq.questions.q4.answer") },
-              { q: "q5", question: t("faq.questions.q5.question"), answer: t("faq.questions.q5.answer") }
-            ].map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden">
-                <button
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-gray-500" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {t("cta.title")}
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            {t("cta.subtitle")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={getLocalizedPath("contact", locale)}
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
-            >
-              {t("cta.startFreeTrial")}
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href={getLocalizedPath("contact", locale)}
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              {t("cta.requestDemo")}
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    );
 };
 
 export default ProductPage;
