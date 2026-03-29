@@ -5,98 +5,88 @@ import "./globals.css";
 export default function NotFound() {
   return (
     <html>
-      <body className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-200 rounded-full opacity-10 animate-pulse delay-500"></div>
-        </div>
+      <body style={{ backgroundColor: '#07090F', margin: 0, fontFamily: 'inherit' }}>
+        <div className="blueprint-grid" style={{ position: 'fixed', inset: 0, opacity: 0.3, pointerEvents: 'none' }} />
+        <div style={{
+          position: 'fixed', inset: 0, pointerEvents: 'none',
+          background: 'radial-gradient(ellipse 70% 60% at 50% 0%, rgba(200,145,58,0.12) 0%, transparent 65%)'
+        }} />
 
-        {/* Main Content */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
-          <div className="max-w-2xl w-full">
-            {/* Logo Section */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-navy rounded-2xl mb-6 shadow-lg">
-                <Image 
-                  src="/logo.svg" 
-                  alt="OxyKeyPass Logo" 
-                  width={40} 
-                  height={40}
-                  className="text-white"
-                />
-              </div>
-              <h1 className="text-4xl font-bold text-gray-800 mb-2 font-heading">OxyKeyPass</h1>
-              <p className="text-lg text-gray-600 font-body">Kurumsal SaaS Platformu</p>
+        <div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '2rem' }}>
+
+          {/* Logo */}
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', textDecoration: 'none', marginBottom: '3rem' }}>
+            <Image src="/logo.svg" alt="OxyKeyPass" width={0} height={0} style={{ height: '1.5rem', width: 'auto' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+              <span style={{ fontWeight: 700, fontSize: '0.9rem', color: '#E8EDF5', letterSpacing: '-0.025em' }}>OxyKeyPass</span>
+              <span style={{ fontSize: '0.55rem', color: '#5A7090', fontFamily: 'monospace', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Geçiş Sistemleri</span>
             </div>
+          </Link>
 
-            {/* 404 Content */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-white/20">
-              <div className="text-center">
-                {/* 404 Number */}
-                <div className="mb-8">
-                  <h1 className="text-8xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-                    404
-                  </h1>
-                  <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-                </div>
+          {/* Card */}
+          <div style={{
+            width: '100%', maxWidth: '480px',
+            backgroundColor: '#0D1117',
+            border: '1px solid rgba(200,145,58,0.2)',
+            borderRadius: '1.25rem',
+            padding: '3rem 2.5rem',
+            boxShadow: '0 0 80px rgba(200,145,58,0.07)',
+            textAlign: 'center',
+            position: 'relative',
+            overflow: 'hidden',
+          }}>
+            <div style={{
+              position: 'absolute', inset: 0, pointerEvents: 'none',
+              background: 'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,145,58,0.06), transparent)'
+            }} />
 
-                {/* Error Message */}
-                <h2 className="text-3xl font-bold text-gray-800 mb-4 font-heading">
-                  Sayfa Bulunamadı
-                </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed font-body">
-                  Üzgünüz, aradığınız sayfa mevcut değil. Belki sayfa taşınmış veya silinmiş olabilir.
-                </p>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                  <Link
-                    href="/"
-                    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  >
-                    🏠 Ana Sayfaya Dön
-                  </Link>
-                  <Link
-                    href="/hizmetler"
-                    className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-1"
-                  >
-                    🚀 Hizmetlerimizi Keşfet
-                  </Link>
-                </div>
-
-                {/* Helpful Links */}
-                <div className="border-t border-gray-200 pt-8">
-                  <p className="text-gray-500 mb-4">Yardımcı olabilecek sayfalar:</p>
-                  <div className="flex flex-wrap justify-center gap-4 text-sm">
-                    <Link href="/hakkimizda" className="text-blue-600 hover:text-blue-800 hover:underline">
-                      Hakkımızda
-                    </Link>
-                    <Link href="/hizmetler" className="text-blue-600 hover:text-blue-800 hover:underline">
-                      Hizmetler
-                    </Link>
-                    <Link href="/projeler" className="text-blue-600 hover:text-blue-800 hover:underline">
-                      Projeler
-                    </Link>
-                    <Link href="/teknolojiler" className="text-blue-600 hover:text-blue-800 hover:underline">
-                      Teknolojiler
-                    </Link>
-                    <Link href="/iletisim" className="text-blue-600 hover:text-blue-800 hover:underline">
-                      İletişim
-                    </Link>
-                  </div>
-                </div>
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              {/* Error code */}
+              <div style={{
+                fontFamily: 'monospace', fontWeight: 700,
+                fontSize: 'clamp(4rem, 15vw, 7rem)',
+                color: '#C8913A', lineHeight: 1,
+                marginBottom: '1rem',
+                opacity: 0.9,
+              }}>
+                404
               </div>
-            </div>
 
-            {/* Footer */}
-            <div className="text-center mt-8">
-              <p className="text-gray-500 text-sm">
-                © 2024 OxyKeyPass. Tüm hakları saklıdır.
+              <div style={{ width: '3rem', height: '1px', background: 'rgba(200,145,58,0.4)', margin: '0 auto 1.5rem' }} />
+
+              <h1 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#F0EDE8', marginBottom: '0.75rem', letterSpacing: '-0.01em' }}>
+                Sayfa Bulunamadı
+              </h1>
+              <p style={{ fontSize: '0.875rem', color: '#6B7A90', lineHeight: 1.6, marginBottom: '2rem' }}>
+                Aradığınız sayfa taşınmış, silinmiş ya da hiç var olmamış olabilir.
               </p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <Link href="/" style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                  padding: '0.875rem 1.75rem',
+                  backgroundColor: '#C8913A', color: '#07090F',
+                  borderRadius: '0.75rem', fontWeight: 600, fontSize: '0.875rem',
+                  textDecoration: 'none', transition: 'background-color 0.2s',
+                }}>
+                  Ana Sayfaya Dön
+                </Link>
+                <Link href="/iletisim" style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                  padding: '0.875rem 1.75rem',
+                  border: '1px solid rgba(200,145,58,0.25)', color: '#F0EDE8',
+                  borderRadius: '0.75rem', fontWeight: 600, fontSize: '0.875rem',
+                  textDecoration: 'none',
+                }}>
+                  İletişime Geç
+                </Link>
+              </div>
             </div>
           </div>
+
+          <p style={{ marginTop: '2rem', fontSize: '0.75rem', fontFamily: 'monospace', color: '#2A3545' }}>
+            © {new Date().getFullYear()} OxyKeyPass
+          </p>
         </div>
       </body>
     </html>

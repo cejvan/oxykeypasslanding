@@ -99,6 +99,14 @@ export const ROUTES = {
         fr: "produit/flux-travail",
         de: "produkt/arbeitsablauf"
     },
+    // Get started
+    "start": {
+        tr: "basla",
+        en: "start",
+        es: "empezar",
+        fr: "commencer",
+        de: "starten"
+    },
     // Solutions subpages
     "solutions/site-management": {
         tr: "cozumler/site-yonetimi",

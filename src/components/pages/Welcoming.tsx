@@ -179,13 +179,13 @@ const Welcoming = () => {
                         style={{ animationDelay: '0.3s' }}
                     >
                         <a
-                            href={getLocalizedPath('contact', locale)}
+                            href={getLocalizedPath('start', locale)}
                             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold font-body rounded-xl transition-all duration-200 glow-gold-sm"
                             style={{ backgroundColor: '#C8913A', color: '#07090F' }}
                             onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#A8751F')}
                             onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C8913A')}
                         >
-                            {locale === 'tr' ? 'Teklif Al' : 'Get a Quote'}
+                            {locale === 'tr' ? 'Hemen Başla' : 'Get Started'}
                             <ArrowRight className="w-4 h-4" />
                         </a>
                         <a
@@ -481,13 +481,13 @@ const Welcoming = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href={getLocalizedPath('contact', locale)}
+                            href={getLocalizedPath('start', locale)}
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold font-body rounded-xl transition-all duration-200 glow-gold-sm"
                             style={{ backgroundColor: '#C8913A', color: '#07090F' }}
                             onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#A8751F')}
                             onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C8913A')}
                         >
-                            {locale === 'tr' ? 'Teklif Al' : 'Get a Quote'}
+                            {locale === 'tr' ? 'Hemen Başla' : 'Get Started'}
                             <ArrowRight className="w-4 h-4" />
                         </a>
                         <a

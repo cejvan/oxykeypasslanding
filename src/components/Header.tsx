@@ -198,6 +198,17 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
+
+                        {/* Hemen Başla */}
+                        <a
+                            href={locale === 'tr' ? '/basla' : `/${locale}/start`}
+                            className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold font-body rounded-lg transition-all duration-200"
+                            style={{ backgroundColor: '#C8913A', color: '#07090F' }}
+                            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#A8751F')}
+                            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C8913A')}
+                        >
+                            {locale === 'tr' ? 'Hemen Başla' : 'Get Started'}
+                        </a>
                     </div>
 
                     {/* ── Mobile right ── */}

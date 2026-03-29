@@ -6,6 +6,7 @@ import ContactPage from "@/components/pages/ContactPage";
 import ProductPage from "@/components/pages/ProductPage";
 import SolutionsPage from "@/components/pages/SolutionsPage";
 import SiteManagementPage from "@/components/pages/solutions/SiteManagementPage";
+import GetStartedPage from "@/components/pages/GetStartedPage";
 import MobileAppPage from "@/components/pages/product/MobileAppPage";
 import GeneralApiPage from "@/components/pages/product/GeneralApiPage";
 import DeviceIntegrationPage from "@/components/pages/product/DeviceIntegrationPage";
@@ -104,6 +105,15 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
     return (
       <PageWrapper>
         <WorkflowPage />
+      </PageWrapper>
+    );
+  }
+
+  // /[locale]/start or /[locale]/basla
+  if (routeKey === "start" && Array.isArray(rest) && rest.length === 1) {
+    return (
+      <PageWrapper>
+        <GetStartedPage />
       </PageWrapper>
     );
   }
