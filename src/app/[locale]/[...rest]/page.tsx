@@ -57,7 +57,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "mobile-app" || rest[1] === "mobil-uygulama")) {
     return (
       <PageWrapper>
-        <MobileAppPage locale={locale} />
+        <MobileAppPage />
       </PageWrapper>
     );
   }
@@ -66,7 +66,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "general-api" || rest[1] === "genel-api")) {
     return (
       <PageWrapper>
-        <GeneralApiPage locale={locale} />
+        <GeneralApiPage />
       </PageWrapper>
     );
   }
@@ -75,7 +75,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "device-integration" || rest[1] === "cihaz-entegrasyonu")) {
     return (
       <PageWrapper>
-        <DeviceIntegrationPage locale={locale} />
+        <DeviceIntegrationPage />
       </PageWrapper>
     );
   }
@@ -84,7 +84,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "admin-panels" || rest[1] === "yonetim-paneli")) {
     return (
       <PageWrapper>
-        <AdminPanelsPage locale={locale} />
+        <AdminPanelsPage />
       </PageWrapper>
     );
   }
@@ -93,7 +93,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "company-api" || rest[1] === "firma-api")) {
     return (
       <PageWrapper>
-        <CompanyApiPage locale={locale} />
+        <CompanyApiPage />
       </PageWrapper>
     );
   }
@@ -102,7 +102,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "product" && Array.isArray(rest) && rest.length === 2 && (rest[1] === "workflow" || rest[1] === "koordinasyon")) {
     return (
       <PageWrapper>
-        <WorkflowPage locale={locale} />
+        <WorkflowPage />
       </PageWrapper>
     );
   }
@@ -147,7 +147,7 @@ export default async function DynamicPage({ params }: DynamicPageProps) {
   if (routeKey === "pricing" && Array.isArray(rest) && rest.length === 1) {
     return (
       <PageWrapper>
-        <PricingPage locale={locale} />
+        <PricingPage />
       </PageWrapper>
     );
   }
